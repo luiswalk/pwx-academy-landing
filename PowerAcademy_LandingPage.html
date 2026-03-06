@@ -1,0 +1,1004 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Teologia Ministerial — Power Academy</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --ink: #1a1714;
+    --ink-muted: #6b6560;
+    --ink-faint: #c8c2bb;
+    --parchment: #faf8f5;
+    --warm-white: #ffffff;
+    --gold: #b8965a;
+    --gold-light: #d4b07a;
+    --rule: #e8e2d9;
+    --serif: 'Cormorant Garamond', Georgia, serif;
+    --sans: 'DM Sans', system-ui, sans-serif;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: var(--sans);
+    background: var(--parchment);
+    color: var(--ink);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ─── NAV ─────────────────────────────────────────── */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    padding: 20px 48px;
+    display: flex; justify-content: space-between; align-items: center;
+    background: rgba(250,248,245,0.92);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--rule);
+  }
+  .nav-logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+  }
+  .nav-logo img {
+    height: 40px;
+    width: auto;
+    display: block;
+  }
+  .nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+  }
+  .nav-link {
+    font-family: var(--sans);
+    font-size: 13px;
+    font-weight: 400;
+    letter-spacing: 0.05em;
+    color: var(--ink-muted);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  .nav-link:hover { color: var(--ink); }
+  .nav-cta {
+    font-family: var(--sans);
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    color: var(--gold);
+    text-decoration: none;
+    border-bottom: 1px solid var(--gold);
+    padding-bottom: 1px;
+    transition: opacity 0.2s;
+  }
+  .nav-cta:hover { opacity: 0.7; }
+
+  /* ─── HERO ────────────────────────────────────────── */
+  .hero {
+    min-height: 100vh;
+    display: flex; flex-direction: column; justify-content: center;
+    padding: 140px 48px 80px;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  .hero-eyebrow {
+    font-family: var(--sans);
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 32px;
+    display: flex; align-items: center; gap: 12px;
+  }
+  .hero-eyebrow::before {
+    content: '';
+    display: block; width: 32px; height: 1px;
+    background: var(--gold);
+  }
+  .hero-headline {
+    font-family: var(--serif);
+    font-size: clamp(42px, 6vw, 76px);
+    font-weight: 300;
+    line-height: 1.1;
+    letter-spacing: -0.01em;
+    color: var(--ink);
+    margin-bottom: 32px;
+  }
+  .hero-headline em {
+    font-style: italic;
+    font-weight: 300;
+    color: var(--gold);
+  }
+  .hero-sub {
+    font-family: var(--sans);
+    font-size: 17px;
+    font-weight: 300;
+    line-height: 1.7;
+    color: var(--ink-muted);
+    max-width: 520px;
+    margin-bottom: 52px;
+  }
+  .hero-sub strong { font-weight: 500; color: var(--ink); }
+  .hero-actions { display: flex; align-items: center; gap: 32px; flex-wrap: wrap; }
+  .btn-primary {
+    display: inline-block;
+    padding: 16px 36px;
+    background: var(--ink);
+    color: var(--parchment);
+    font-family: var(--sans);
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: background 0.25s, transform 0.2s;
+  }
+  .btn-primary:hover { background: var(--gold); transform: translateY(-1px); }
+  .hero-note {
+    font-size: 12px;
+    color: var(--ink-faint);
+    font-style: italic;
+    font-family: var(--serif);
+  }
+  .hero-divider {
+    width: 100%;
+    height: 1px;
+    background: var(--rule);
+    margin-top: 80px;
+  }
+  .hero-stats {
+    display: flex; gap: 56px;
+    padding-top: 40px;
+    flex-wrap: wrap;
+  }
+  .stat-item { display: flex; flex-direction: column; gap: 4px; }
+  .stat-number {
+    font-family: var(--serif);
+    font-size: 32px;
+    font-weight: 300;
+    color: var(--ink);
+  }
+  .stat-label {
+    font-size: 11px;
+    font-weight: 400;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--ink-muted);
+  }
+
+  /* ─── SECTION BASE ───────────────────────────────── */
+  section { padding: 100px 48px; }
+  .section-inner { max-width: 900px; margin: 0 auto; }
+  .section-tag {
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 20px;
+  }
+  .section-title {
+    font-family: var(--serif);
+    font-size: clamp(30px, 4vw, 48px);
+    font-weight: 300;
+    line-height: 1.2;
+    color: var(--ink);
+    margin-bottom: 16px;
+  }
+  .section-title em { font-style: italic; color: var(--gold); }
+  .section-lead {
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.75;
+    color: var(--ink-muted);
+    max-width: 560px;
+    margin-bottom: 56px;
+  }
+  hr.rule { border: none; border-top: 1px solid var(--rule); }
+
+  /* ─── PROBLEMA ───────────────────────────────────── */
+  .problema { background: var(--warm-white); }
+  .pain-list {
+    list-style: none;
+    display: flex; flex-direction: column; gap: 0;
+    border-top: 1px solid var(--rule);
+  }
+  .pain-item {
+    display: grid; grid-template-columns: 40px 1fr;
+    align-items: start; gap: 24px;
+    padding: 28px 0;
+    border-bottom: 1px solid var(--rule);
+  }
+  .pain-num {
+    font-family: var(--serif);
+    font-size: 13px;
+    font-weight: 300;
+    color: var(--ink-faint);
+    padding-top: 3px;
+  }
+  .pain-text {
+    font-family: var(--serif);
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 1.5;
+    color: var(--ink);
+    font-style: italic;
+  }
+
+  /* ─── O CURSO ────────────────────────────────────── */
+  .curso-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1px;
+    background: var(--rule);
+    border: 1px solid var(--rule);
+    margin-bottom: 64px;
+  }
+  .curso-cell {
+    background: var(--parchment);
+    padding: 36px;
+  }
+  .curso-cell-label {
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+    margin-bottom: 10px;
+  }
+  .curso-cell-value {
+    font-family: var(--serif);
+    font-size: 22px;
+    font-weight: 300;
+    color: var(--ink);
+    line-height: 1.3;
+  }
+  .curso-cell-value em { color: var(--gold); font-style: italic; }
+
+  /* ─── RESULTADOS ─────────────────────────────────── */
+  .resultados { background: var(--ink); }
+  .resultados .section-title { color: var(--parchment); }
+  .resultados .section-tag { color: var(--gold-light); }
+  .resultados .section-lead { color: rgba(250,248,245,0.55); }
+  .results-list {
+    list-style: none;
+    display: flex; flex-direction: column; gap: 0;
+    border-top: 1px solid rgba(255,255,255,0.08);
+  }
+  .result-item {
+    display: flex; align-items: baseline; gap: 20px;
+    padding: 24px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+  }
+  .result-arrow {
+    font-size: 14px;
+    color: var(--gold);
+    flex-shrink: 0;
+  }
+  .result-text {
+    font-family: var(--serif);
+    font-size: 19px;
+    font-weight: 300;
+    color: var(--parchment);
+    line-height: 1.5;
+  }
+
+  /* ─── PROFESSORES ────────────────────────────────── */
+  .prof-photo {
+    width: 100%;
+    height: 220px;
+    overflow: hidden;
+    margin-bottom: 24px;
+    background: var(--rule);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .prof-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+    display: block;
+  }
+  .prof-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 1px;
+    background: var(--rule);
+    border: 1px solid var(--rule);
+  }
+  .prof-card {
+    background: var(--warm-white);
+    padding: 36px;
+    transition: background 0.2s;
+  }
+  .prof-card:hover { background: var(--parchment); }
+  .prof-name {
+    font-family: var(--serif);
+    font-size: 20px;
+    font-weight: 400;
+    color: var(--ink);
+    margin-bottom: 4px;
+  }
+  .prof-title {
+    font-size: 11px;
+    font-weight: 400;
+    letter-spacing: 0.05em;
+    color: var(--gold);
+    margin-bottom: 16px;
+  }
+  .prof-desc {
+    font-size: 13px;
+    font-weight: 300;
+    line-height: 1.65;
+    color: var(--ink-muted);
+  }
+
+  /* ─── DISCIPLINAS ────────────────────────────────── */
+  .disciplinas { background: var(--warm-white); }
+  .disc-block { margin-bottom: 48px; }
+  .disc-area {
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold);
+    border-top: 2px solid var(--gold);
+    padding-top: 14px;
+    margin-bottom: 20px;
+  }
+  .disc-list {
+    list-style: none;
+    display: flex; flex-wrap: wrap; gap: 8px;
+  }
+  .disc-tag {
+    font-family: var(--sans);
+    font-size: 12px;
+    font-weight: 400;
+    color: var(--ink-muted);
+    border: 1px solid var(--rule);
+    padding: 7px 14px;
+    letter-spacing: 0.02em;
+    transition: border-color 0.2s, color 0.2s;
+  }
+  .disc-tag:hover { border-color: var(--gold); color: var(--ink); }
+
+  /* ─── OBJEÇÕES ───────────────────────────────────── */
+  .objecoes {
+    background: linear-gradient(to bottom, var(--parchment), var(--warm-white));
+  }
+  .obj-grid {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 32px;
+  }
+  .obj-card {
+    padding: 40px;
+    border: 1px solid var(--rule);
+    background: var(--warm-white);
+  }
+  .obj-q {
+    font-family: var(--serif);
+    font-size: 19px;
+    font-style: italic;
+    font-weight: 300;
+    color: var(--ink);
+    margin-bottom: 16px;
+    line-height: 1.4;
+  }
+  .obj-a {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1.7;
+    color: var(--ink-muted);
+  }
+  .obj-a strong { font-weight: 500; color: var(--ink); }
+
+  /* ─── DEPOIMENTO ─────────────────────────────────── */
+  .testemunho { background: var(--ink); padding: 100px 48px; }
+  .testemunho-inner {
+    max-width: 720px; margin: 0 auto; text-align: center;
+  }
+  .quote-mark {
+    font-family: var(--serif);
+    font-size: 80px;
+    line-height: 0.5;
+    color: var(--gold);
+    opacity: 0.4;
+    margin-bottom: 32px;
+    display: block;
+  }
+  .quote-text {
+    font-family: var(--serif);
+    font-size: clamp(22px, 3vw, 30px);
+    font-weight: 300;
+    font-style: italic;
+    line-height: 1.5;
+    color: var(--parchment);
+    margin-bottom: 32px;
+  }
+  .quote-attr {
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: rgba(250,248,245,0.4);
+  }
+
+  /* ─── PREÇO / CTA ────────────────────────────────── */
+  .preco { background: var(--warm-white); }
+  .preco-card {
+    border: 1px solid var(--rule);
+    padding: 64px;
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .preco-eyebrow {
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 24px;
+  }
+  .preco-value {
+    font-family: var(--serif);
+    font-size: 64px;
+    font-weight: 300;
+    color: var(--ink);
+    line-height: 1;
+    margin-bottom: 8px;
+  }
+  .preco-period {
+    font-size: 13px;
+    color: var(--ink-muted);
+    margin-bottom: 40px;
+  }
+  .preco-includes {
+    list-style: none;
+    text-align: left;
+    display: flex; flex-direction: column; gap: 12px;
+    margin-bottom: 48px;
+    border-top: 1px solid var(--rule);
+    padding-top: 32px;
+  }
+  .preco-includes li {
+    display: flex; align-items: center; gap: 12px;
+    font-size: 14px; font-weight: 300; color: var(--ink-muted);
+  }
+  .preco-includes li::before {
+    content: '—';
+    color: var(--gold);
+    font-family: var(--serif);
+    flex-shrink: 0;
+  }
+  .btn-primary-large {
+    display: block;
+    width: 100%;
+    padding: 20px 36px;
+    background: var(--ink);
+    color: var(--parchment);
+    font-family: var(--sans);
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    text-decoration: none;
+    margin-bottom: 16px;
+    transition: background 0.25s;
+    text-align: center;
+  }
+  .btn-primary-large:hover { background: var(--gold); }
+  .preco-guarantee {
+    font-size: 12px;
+    color: var(--ink-faint);
+    font-style: italic;
+    font-family: var(--serif);
+  }
+
+  /* ─── FAQ ────────────────────────────────────────── */
+  .faq { background: var(--parchment); }
+  .faq-list { display: flex; flex-direction: column; gap: 0; }
+  .faq-item {
+    border-top: 1px solid var(--rule);
+    padding: 28px 0;
+  }
+  .faq-item:last-child { border-bottom: 1px solid var(--rule); }
+  .faq-q {
+    font-family: var(--serif);
+    font-size: 18px;
+    font-weight: 400;
+    color: var(--ink);
+    margin-bottom: 12px;
+    cursor: pointer;
+  }
+  .faq-a {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1.7;
+    color: var(--ink-muted);
+    max-width: 640px;
+  }
+
+  /* ─── FOOTER ─────────────────────────────────────── */
+  footer {
+    background: var(--ink);
+    padding: 28px 48px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+  .footer-copy {
+    font-size: 12px;
+    color: rgba(250,248,245,0.4);
+    letter-spacing: 0.02em;
+  }
+  .footer-social {
+    display: flex;
+    gap: 10px;
+  }
+  .social-btn {
+    width: 36px; height: 36px;
+    border-radius: 50%;
+    background: var(--gold);
+    display: flex; align-items: center; justify-content: center;
+    text-decoration: none;
+    transition: opacity 0.2s;
+    flex-shrink: 0;
+  }
+  .social-btn:hover { opacity: 0.75; }
+  .social-btn svg { width: 17px; height: 17px; fill: #fff; display: block; }
+
+  /* ─── HAMBURGER ───────────────────────────────────── */
+  .nav-hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    width: 32px; height: 32px;
+    background: none; border: none;
+    cursor: pointer; padding: 4px;
+  }
+  .nav-hamburger span {
+    display: block; width: 22px; height: 1.5px;
+    background: var(--ink);
+    transition: transform 0.3s, opacity 0.3s;
+    transform-origin: center;
+  }
+  .nav-hamburger.open span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
+  .nav-hamburger.open span:nth-child(2) { opacity: 0; }
+  .nav-hamburger.open span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
+
+  .nav-mobile {
+    display: none;
+    position: fixed; top: 65px; left: 0; right: 0; z-index: 99;
+    background: rgba(250,248,245,0.97);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--rule);
+    padding: 0 24px;
+    flex-direction: column;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.35s ease, padding 0.35s ease;
+  }
+  .nav-mobile.open {
+    max-height: 300px;
+    padding: 16px 24px 20px;
+  }
+  .nav-mobile a {
+    font-family: var(--sans);
+    font-size: 15px;
+    font-weight: 400;
+    color: var(--ink-muted);
+    text-decoration: none;
+    padding: 14px 0;
+    border-bottom: 1px solid var(--rule);
+    display: block;
+    transition: color 0.2s;
+  }
+  .nav-mobile a:last-child { border-bottom: none; }
+  .nav-mobile a:hover { color: var(--ink); }
+  .nav-mobile .nav-mobile-cta {
+    color: var(--gold);
+    font-weight: 500;
+    border-bottom: none !important;
+    padding-top: 16px;
+  }
+
+  /* ─── RESPONSIVE ──────────────────────────────────── */
+  @media (max-width: 768px) {
+    nav { padding: 18px 24px; }
+    .nav-menu { display: none; }
+    .nav-cta { display: none; }
+    .nav-hamburger { display: flex; }
+    .nav-mobile { display: flex; }
+    .hero { padding: 120px 24px 60px; }
+    section { padding: 72px 24px; }
+    .curso-grid { grid-template-columns: 1fr; }
+    .obj-grid { grid-template-columns: 1fr; }
+    .preco-card { padding: 40px 28px; }
+    .hero-stats { gap: 32px; }
+    footer { padding: 24px; flex-direction: column; align-items: flex-start; gap: 20px; }
+  }
+
+  /* ─── FADE ANIMATIONS ──────────────────────────────── */
+  .fade-in {
+    opacity: 0; transform: translateY(20px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+  .fade-in.visible { opacity: 1; transform: none; }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="nav-logo"><img src="public/acad.png" alt="Power Academy"></a>
+  <div class="nav-menu">
+    <a href="#disciplinas" class="nav-link">Disciplinas</a>
+    <a href="#professores" class="nav-link">Professores</a>
+    <a href="#faq" class="nav-link">FAQ</a>
+  </div>
+  <a href="https://pwxacademy.eadplataforma.app/plano/teologia-ministerial-20261-699cbf44e3722" target="_blank" class="nav-cta">Garantir vaga →</a>
+  <button class="nav-hamburger" id="hamburger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- MENU MOBILE -->
+<div class="nav-mobile" id="nav-mobile">
+  <a href="#disciplinas" class="nav-mobile-link">Disciplinas</a>
+  <a href="#professores" class="nav-mobile-link">Professores</a>
+  <a href="#faq" class="nav-mobile-link">FAQ</a>
+  <a href="https://pwxacademy.eadplataforma.app/plano/teologia-ministerial-20261-699cbf44e3722" target="_blank" class="nav-mobile-cta">Garantir vaga →</a>
+</div>
+
+<!-- HERO -->
+<section class="hero" style="padding-left:48px;padding-right:48px;max-width:100%;">
+  <div style="max-width:900px;margin:0 auto;">
+    <p class="hero-eyebrow fade-in">Teologia Ministerial · Power Academy</p>
+    <h1 class="hero-headline fade-in">
+      Formação teológica<br>
+      de 24 meses, feita<br>
+      para quem tem<br>
+      <em>a agenda cheia.</em>
+    </h1>
+    <p class="hero-sub fade-in">
+      Reconhecida pelo MEC como extensão universitária.<br>
+      <strong>Para todo cristão que quer estudar com profundidade, mas nunca conseguiu tempo.</strong>
+    </p>
+    <div class="hero-actions fade-in">
+      <a href="https://pwxacademy.eadplataforma.app/plano/teologia-ministerial-20261-699cbf44e3722" target="_blank" class="btn-primary">Quero me matricular</a>
+      <span class="hero-note">Turma limitada · R$197/mês</span>
+    </div>
+    <div class="hero-divider fade-in"></div>
+    <div class="hero-stats fade-in">
+      <div class="stat-item">
+        <span class="stat-number">24</span>
+        <span class="stat-label">Meses de formação</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-number">20</span>
+        <span class="stat-label">Disciplinas</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-number">MEC</span>
+        <span class="stat-label">Reconhecido</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-number">R$197</span>
+        <span class="stat-label">Por mês</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROBLEMA -->
+<section class="problema">
+  <div class="section-inner">
+    <p class="section-tag fade-in">Você se reconhece aqui?</p>
+    <h2 class="section-title fade-in">Você lidera pessoas.<br>Mas às vezes sente que<br><em>o fundamento falta.</em></h2>
+    <ul class="pain-list fade-in">
+      <li class="pain-item">
+        <span class="pain-num">01</span>
+        <span class="pain-text">"Eu sei o que acredito, mas não consigo explicar quando alguém me desafia."</span>
+      </li>
+      <li class="pain-item">
+        <span class="pain-num">02</span>
+        <span class="pain-text">"Meu ensino se tornou repetição do que ouvi, não do que realmente estudei."</span>
+      </li>
+      <li class="pain-item">
+        <span class="pain-num">03</span>
+        <span class="pain-text">"Quero estudar teologia, mas não tenho tempo — e tenho medo de ser difícil demais."</span>
+      </li>
+      <li class="pain-item">
+        <span class="pain-num">04</span>
+        <span class="pain-text">"Identifico quando algo está errado doutrinariamente, mas não consigo articular o porquê."</span>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- O CURSO -->
+<section style="background:var(--parchment);">
+  <div class="section-inner">
+    <p class="section-tag fade-in">O que é o Teologia Ministerial</p>
+    <h2 class="section-title fade-in">Uma formação construída<br>para a <em>realidade de todo cristão.</em></h2>
+    <p class="section-lead fade-in">Não é um curso pesado nem cheio de termos difíceis. É uma formação leve, acessível e progressiva, desenvolvida para todo cristão que quer entender o que crê, com ritmo adaptável e conteúdo que transforma a forma como você pensa, ensina e decide.</p>
+    <div class="curso-grid fade-in">
+      <div class="curso-cell">
+        <p class="curso-cell-label">Duração</p>
+        <p class="curso-cell-value">24 meses · <em>Híbrido</em> · estude do jeito que quiser</p>
+      </div>
+      <div class="curso-cell">
+        <p class="curso-cell-label">Reconhecimento</p>
+        <p class="curso-cell-value">Extensão universitária <em>MEC</em></p>
+      </div>
+      <div class="curso-cell">
+        <p class="curso-cell-label">Certificado intermediário</p>
+        <p class="curso-cell-value">Em <em>12 meses</em> você já recebe seu primeiro certificado</p>
+      </div>
+      <div class="curso-cell">
+        <p class="curso-cell-label">Investimento</p>
+        <p class="curso-cell-value"><em>R$197</em> por mês <span style="font-size:14px;color:var(--gold);">· membro Power tem desconto</span></p>
+      </div>
+      <div class="curso-cell">
+        <p class="curso-cell-label">Disciplinas</p>
+        <p class="curso-cell-value">20 no total · 3 grandes áreas</p>
+      </div>
+      <div class="curso-cell">
+        <p class="curso-cell-label">Para quem é</p>
+        <p class="curso-cell-value">Para <em>todo cristão</em> que quer aprofundar no conhecimento sobre Deus</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RESULTADOS -->
+<section class="resultados">
+  <div class="section-inner">
+    <p class="section-tag fade-in">Depois do curso</p>
+    <h2 class="section-title fade-in">Você vai conseguir fazer<br><em>coisas concretas.</em></h2>
+    <p class="section-lead fade-in">Não prometemos transformação vaga. Prometemos capacidade prática: o que você vai conseguir fazer depois que não conseguia antes.</p>
+    <ul class="results-list fade-in">
+      <li class="result-item">
+        <span class="result-arrow">→</span>
+        <span class="result-text">Explicar as principais doutrinas com clareza para qualquer pessoa, do Grupo de Crescimento e Cuidado à Celebração</span>
+      </li>
+      <li class="result-item">
+        <span class="result-arrow">→</span>
+        <span class="result-text">Interpretar textos bíblicos dentro do contexto histórico e teológico correto</span>
+      </li>
+      <li class="result-item">
+        <span class="result-arrow">→</span>
+        <span class="result-text">Identificar erros doutrinários comuns com segurança e sem constrangimento</span>
+      </li>
+      <li class="result-item">
+        <span class="result-arrow">→</span>
+        <span class="result-text">Organizar estudos e sermões com base sólida, não só instinto ministerial</span>
+      </li>
+      <li class="result-item">
+        <span class="result-arrow">→</span>
+        <span class="result-text">Tomar decisões ministeriais com convicção estruturada, não apenas emoção</span>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- PROFESSORES -->
+<section id="professores" style="background:var(--warm-white);">
+  <div class="section-inner">
+    <p class="section-tag fade-in">Corpo docente</p>
+    <h2 class="section-title fade-in">Formação de <em>nível real</em><br>exige professores reais.</h2>
+    <p class="section-lead fade-in">Cada professor foi escolhido porque une excelência acadêmica com experiência ministerial concreta. Não é teoria distante, é conhecimento que já funcionou na prática.</p>
+    <div class="prof-grid fade-in">
+      <div class="prof-card">
+        <div class="prof-photo"><img src="public/prof/prof-carlos.png" alt="Bp. Carlos Damasceno"></div>
+        <p class="prof-name">Bp. Carlos Damasceno</p>
+        <p class="prof-title">Advogado · MBA Gestão Estratégica de Negócios · Babson College, EUA</p>
+        <p class="prof-desc">Advogado, MBA Gestão Estratégica de Negócios, Especialista em Empreendedorismo (Babson College/USA), Teólogo Ministerial e Pós Graduado em Teologia Sistemática e bíblica (Mackenzie).</p>
+      </div>
+      <div class="prof-card">
+        <div class="prof-photo"><img src="public/prof/prof-dany.png" alt="Bispa Dany Damasceno"></div>
+        <p class="prof-name">Bispa Dany Damasceno</p>
+        <p class="prof-title">Pedagoga · MBA Gestão Estratégica de Negócios · IBMEC</p>
+        <p class="prof-desc">Pedagoga, MBA Gestão Estratégica de Negócios (IBMEC), Especialista em Psicopedagogia, Docência do Ensino Superior e Neuropsicologia, Pós Graduada em Teologia Sistemática e bíblica (Mackenzie).</p>
+      </div>
+      <div class="prof-card">
+        <div class="prof-photo"><img src="public/prof/prof-chris.png" alt="Pr. Chris Leão"></div>
+        <p class="prof-name">Pr. Chris Leão</p>
+        <p class="prof-title">Bacharel em Direito · MBA em Inovação e Liderança · PUC-RS</p>
+        <p class="prof-desc">Bacharel em Direito (Dom Helder Câmara), Teólogo Ministerial, MBA em Inovação e Liderança (PUC/RS), Pós Graduando em Teologia bíblica e sistemática (Mackenzie).</p>
+      </div>
+      <div class="prof-card">
+        <div class="prof-photo"><img src="public/prof/prof-karla.png" alt="Karla Damasceno"></div>
+        <p class="prof-name">Karla Damasceno</p>
+        <p class="prof-title">Especialista em Hebraico e História de Israel</p>
+        <p class="prof-desc">Professora com mais de 18 anos de experiência. Especialista em Hebraico e em História de Israel. Esteve mais de 120 vezes em Israel.</p>
+      </div>
+      <div class="prof-card">
+        <div class="prof-photo"><img src="public/prof/prof-luis.png" alt="Luis Felipe"></div>
+        <p class="prof-name">Luis Felipe</p>
+        <p class="prof-title">Engenheiro · Mestrando em Teologia pela FABAPAR</p>
+        <p class="prof-desc">Graduado em Engenharia (FAP), MBA em Engenharia da Qualidade, Pós Graduado em Teologia Sistemática (Mackenzie). Mestrando em Teologia pela FABAPAR.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DISCIPLINAS -->
+<section id="disciplinas" class="disciplinas">
+  <div class="section-inner">
+    <p class="section-tag fade-in">Grade curricular</p>
+    <h2 class="section-title fade-in">20 disciplinas. <em>3 grandes áreas.</em><br>1 formação completa.</h2>
+    <p class="section-lead fade-in">Com disciplinas em Teologia Sistemática, Teologia Bíblica e Teologia Aplicada, o curso é híbrido na plataforma Power Academy, com cada disciplina composta por 4 aulas online e uma aula presencial, com carga horária prevista total de 200 horas por nível.</p>
+    <div class="disc-block fade-in">
+      <p class="disc-area">Teologia Bíblica</p>
+      <ul class="disc-list">
+        <li class="disc-tag">Bibliologia</li>
+        <li class="disc-tag">Pentateuco</li>
+        <li class="disc-tag">História de Israel</li>
+        <li class="disc-tag">Contexto do Velho Testamento</li>
+        <li class="disc-tag">Evangelhos Sinópticos</li>
+        <li class="disc-tag">Teologia Joanina</li>
+        <li class="disc-tag">Contexto do Novo Testamento</li>
+      </ul>
+    </div>
+    <div class="disc-block fade-in">
+      <p class="disc-area">Teologia Sistemática</p>
+      <ul class="disc-list">
+        <li class="disc-tag">Doutrina de Deus</li>
+        <li class="disc-tag">Doutrina de Cristo</li>
+        <li class="disc-tag">Doutrina do Espírito Santo</li>
+        <li class="disc-tag">Antropologia e Doutrina da Salvação</li>
+        <li class="disc-tag">Teologia e Cultura do Reino</li>
+        <li class="disc-tag">Fruto do Espírito</li>
+        <li class="disc-tag">Disciplinas Espirituais</li>
+      </ul>
+    </div>
+    <div class="disc-block fade-in">
+      <p class="disc-area">Teologia Aplicada</p>
+      <ul class="disc-list">
+        <li class="disc-tag">Vida e Comportamento Cristão</li>
+        <li class="disc-tag">Vida e Comportamento Cristão 2</li>
+        <li class="disc-tag">Liderança Cristã</li>
+        <li class="disc-tag">Finanças e Generosidade</li>
+      </ul>
+    </div>
+    <p style="font-size:12px;color:var(--ink-faint);font-style:italic;font-family:var(--serif);">* A grade poderá ser alterada, havendo comunicação prévia.</p>
+  </div>
+</section>
+
+<!-- OBJEÇÕES -->
+<section class="objecoes">
+  <div class="section-inner">
+    <p class="section-tag fade-in">Suas dúvidas têm resposta</p>
+    <h2 class="section-title fade-in">O que costuma<br><em>travar a decisão.</em></h2>
+    <div class="obj-grid fade-in">
+      <div class="obj-card">
+        <p class="obj-q">"Não tenho tempo para estudar teologia."</p>
+        <p class="obj-a">O formato foi pensado exatamente para você. Aulas assíncronas, ritmo adaptável, conteúdo modular. <strong>Você estuda na janela que tem</strong> — não numa grade que ignora que você tem uma família, uma célula e um ministério para liderar. 24 meses é tempo suficiente sem que você precise parar de viver para estudar.</p>
+      </div>
+      <div class="obj-card">
+        <p class="obj-q">"Teologia parece difícil demais para mim."</p>
+        <p class="obj-a">Esse curso não foi feito para teólogos. Foi feito <strong>para quem nunca estudou formalmente</strong> — mas quer entender o que crê com profundidade real. A linguagem é acessível. Os professores foram escolhidos por saber explicar bem, não apenas por saber muito. Na primeira semana, você já vai entender algo que nunca entendeu antes sobre a Bíblia.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DEPOIMENTO -->
+<section class="testemunho">
+  <div class="testemunho-inner">
+    <span class="quote-mark fade-in">"</span>
+    <p class="quote-text fade-in">Eu liderava há anos sem conseguir articular o que eu acreditava. Depois do Power Academy, o meu ensino mudou — e a célula sentiu isso antes mesmo de eu terminar o curso."</p>
+    <p class="quote-attr fade-in">Líder de Célula · Power Church</p>
+  </div>
+</section>
+
+<!-- PREÇO / CTA -->
+<section class="preco" id="matricula">
+  <div class="section-inner">
+    <p class="section-tag fade-in" style="text-align:center;">Matrícula aberta · Turma limitada</p>
+    <h2 class="section-title fade-in" style="text-align:center;margin:0 auto 16px;">Uma decisão que<br><em>muda tudo!</em></h2>
+    <div class="preco-card fade-in">
+      <p class="preco-eyebrow">Teologia Ministerial</p>
+      <p class="preco-value">R$197</p>
+      <p class="preco-period">por mês · 24 meses de formação</p>
+      <ul class="preco-includes">
+        <li>Certificado intermediário aos 12 meses</li>
+        <li>Certificado de extensão universitária (MEC) ao final</li>
+        <li>Corpo docente com formação acadêmica e ministerial</li>
+      </ul>
+      <a href="https://pwxacademy.eadplataforma.app/plano/teologia-ministerial-20261-699cbf44e3722" target="_blank" class="btn-primary-large">Quero garantir minha vaga</a>
+      <p class="preco-guarantee">Vagas limitadas por turma.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq" class="faq">
+  <div class="section-inner">
+    <p class="section-tag fade-in">Perguntas frequentes</p>
+    <h2 class="section-title fade-in">Antes de decidir,<br><em>leia isso.</em></h2>
+    <div class="faq-list fade-in">
+      <div class="faq-item">
+        <p class="faq-q">O curso tem data e horário fixo de aulas?</p>
+        <p class="faq-a">Não. Todas as aulas são gravadas e disponibilizadas na plataforma. Você assiste quando e onde quiser — a única exigência é o compromisso com a sua formação.</p>
+      </div>
+      <div class="faq-item">
+        <p class="faq-q">Preciso ter ensino superior para me matricular?</p>
+        <p class="faq-a">Não é exigido. O Teologia Ministerial é um curso de extensão universitária reconhecido pelo MEC, aberto a qualquer pessoa com disposição para estudar com seriedade.</p>
+      </div>
+      <div class="faq-item">
+        <p class="faq-q">E se eu não conseguir acompanhar o ritmo?</p>
+        <p class="faq-a">O curso foi desenhado em módulos progressivos, sem sobrecarga. Se precisar pausar, o conteúdo continua disponível. A meta é que você conclua — não que você sofra pelo caminho.</p>
+      </div>
+      <div class="faq-item">
+        <p class="faq-q">O certificado tem validade? Serve para algo além da Power Church?</p>
+        <p class="faq-a">Sim. O certificado de extensão universitária com reconhecimento MEC tem validade nacional. Serve como formação complementar em currículos, processos ministeriais e contextos institucionais.</p>
+      </div>
+      <div class="faq-item">
+        <p class="faq-q">O que acontece quando as vagas esgotarem?</p>
+        <p class="faq-a">A próxima turma só abre quando houver disponibilidade. Quem está na lista de espera tem prioridade e condições especiais de matrícula.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p class="footer-copy">© 2025, Power Academy | Todos os direitos reservados.</p>
+  <div class="footer-social">
+    <!-- Instagram -->
+    <a href="https://www.instagram.com/pwx_academy/" target="_blank" class="social-btn" aria-label="Instagram">
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.366.062 2.633.334 3.608 1.308.975.975 1.246 2.242 1.308 3.608.058 1.266.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.062 1.366-.334 2.633-1.308 3.608-.975.975-2.242 1.246-3.608 1.308-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-1.366-.062-2.633-.334-3.608-1.308-.975-.975-1.246-2.242-1.308-3.608C2.175 15.584 2.163 15.204 2.163 12s.012-3.584.07-4.85c.062-1.366.334-2.633 1.308-3.608.975-.975 2.242-1.246 3.608-1.308 1.266-.058 1.646-.07 4.85-.07zm0-2.163c-3.259 0-3.667.014-4.947.072-1.615.073-3.067.49-4.21 1.634C1.699 2.849 1.282 4.3 1.209 5.916 1.151 7.196 1.137 7.604 1.137 12c0 4.396.014 4.804.072 6.084.073 1.615.49 3.067 1.634 4.21 1.143 1.144 2.595 1.561 4.21 1.634 1.28.058 1.688.072 4.947.072s3.667-.014 4.947-.072c1.615-.073 3.067-.49 4.21-1.634 1.144-1.143 1.561-2.595 1.634-4.21.058-1.28.072-1.688.072-4.947s-.014-3.667-.072-4.947c-.073-1.615-.49-3.067-1.634-4.21C19.214 1.699 17.762 1.282 16.147 1.209 14.867 1.151 14.459 1.137 12 1.137zm0 5.838a5.025 5.025 0 1 0 0 10.05 5.025 5.025 0 0 0 0-10.05zm0 8.287a3.262 3.262 0 1 1 0-6.524 3.262 3.262 0 0 1 0 6.524zm6.406-9.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+    </a>
+    <!-- WhatsApp -->
+    <a href="https://wa.me/5531973286490" target="_blank" class="social-btn" aria-label="WhatsApp">
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+    </a>
+  </div>
+</footer>
+
+<script>
+  // Mobile menu toggle
+  const hamburger = document.getElementById('hamburger');
+  const navMobile = document.getElementById('nav-mobile');
+
+  hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('open');
+    navMobile.classList.toggle('open');
+  });
+
+  // Close menu when a link is clicked
+  navMobile.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      hamburger.classList.remove('open');
+      navMobile.classList.remove('open');
+    });
+  });
+
+  // Fade-in on scroll
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('visible');
+        observer.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
