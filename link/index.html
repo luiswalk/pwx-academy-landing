@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Power Academy — Links</title>
+<meta name="description" content="Todos os links do Power Academy em um só lugar.">
+<link rel="icon" href="/public/acad.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html, body {
+    min-height: 100%;
+    background:
+      radial-gradient(120% 90% at 50% 0%, #1d1545 0%, #150f31 55%, #0e0a24 100%);
+    color: #fff;
+    font-family: 'VT323', monospace;
+  }
+
+  body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 48px 20px 60px;
+    position: relative;
+    overflow-x: hidden;
+  }
+
+  /* scanlines CRT */
+  body::after {
+    content: '';
+    position: fixed; inset: 0;
+    pointer-events: none;
+    background: repeating-linear-gradient(0deg, rgba(0,0,0,.15) 0 1px, transparent 1px 2px);
+    z-index: 1;
+  }
+
+  .wrap {
+    width: 100%;
+    max-width: 420px;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+    animation: rise .4s steps(6,end);
+  }
+
+  @keyframes rise  { from{transform:translateY(20px);opacity:0} to{transform:translateY(0);opacity:1} }
+  @keyframes blink { 0%,49%{opacity:1} 50%,100%{opacity:0} }
+  @keyframes pulse { 0%,100%{transform:scale(1)} 50%{transform:scale(1.03)} }
+
+  .eyebrow {
+    color: #3ce8e0;
+    font-family: 'Press Start 2P', monospace;
+    font-size: 8px;
+    letter-spacing: 3px;
+    margin-bottom: 18px;
+    animation: blink 1.1s steps(2) infinite;
+  }
+
+  .logo {
+    width: 180px;
+    max-width: 70%;
+    height: auto;
+    margin: 0 auto 18px;
+    display: block;
+    image-rendering: pixelated;
+  }
+
+  .handle {
+    font-family: 'Press Start 2P', monospace;
+    color: #ffd820;
+    font-size: 12px;
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+  }
+
+  .tag {
+    font-family: 'VT323', monospace;
+    color: #d8d4f2;
+    font-size: 19px;
+    line-height: 1.2;
+    margin-bottom: 30px;
+  }
+
+  .links {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin-bottom: 32px;
+  }
+
+  .link {
+    display: block;
+    background: #ffd820;
+    color: #0c0823;
+    font-family: 'Press Start 2P', monospace;
+    font-size: 12px;
+    letter-spacing: 2px;
+    padding: 18px 18px;
+    text-decoration: none;
+    box-shadow: 0 6px 0 #b8860b;
+    -webkit-clip-path: polygon(6px 0, calc(100% - 6px) 0, 100% 6px, 100% calc(100% - 6px), calc(100% - 6px) 100%, 6px 100%, 0 calc(100% - 6px), 0 8px);
+            clip-path: polygon(6px 0, calc(100% - 6px) 0, 100% 6px, 100% calc(100% - 6px), calc(100% - 6px) 100%, 6px 100%, 0 calc(100% - 6px), 0 8px);
+    transition: transform .08s steps(2), filter .15s;
+  }
+  .link:hover { filter: brightness(1.05); }
+  .link:active {
+    transform: translateY(5px);
+    box-shadow: 0 1px 0 #b8860b;
+  }
+
+  /* variantes de cor para diferenciar */
+  .link.cyan    { background: #3ce8e0; box-shadow: 0 6px 0 #167a76; }
+  .link.cyan:active    { box-shadow: 0 1px 0 #167a76; }
+  .link.magenta { background: #f042f0; color: #1a0822; box-shadow: 0 6px 0 #7a1f7a; }
+  .link.magenta:active { box-shadow: 0 1px 0 #7a1f7a; }
+  .link.green   { background: #4ade80; color: #0c2010; box-shadow: 0 6px 0 #1f6a3a; }
+  .link.green:active   { box-shadow: 0 1px 0 #1f6a3a; }
+  .link.violet  { background: #a78bfa; color: #1a0a3a; box-shadow: 0 6px 0 #4c2b9a; }
+  .link.violet:active  { box-shadow: 0 1px 0 #4c2b9a; }
+
+  .star {
+    display: inline-block;
+    animation: pulse 1.6s steps(8) infinite;
+  }
+
+  .footer {
+    font-family: 'Press Start 2P', monospace;
+    font-size: 8px;
+    letter-spacing: 2px;
+    color: #8d85c0;
+    margin-top: 8px;
+  }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="eyebrow">&gt;&gt;&gt; PRESS START &lt;&lt;&lt;</div>
+
+    <img class="logo" src="/public/acad.png" alt="Power Academy">
+
+    <div class="handle">PWX_ACADEMY</div>
+    <p class="tag">Teologia que forma.<br>Game que ensina.</p>
+
+    <nav class="links">
+      <a class="link" href="https://app.pwx.academy" target="_blank" rel="noopener">
+        <span class="star">★</span> MATRÍCULA <span class="star">★</span>
+      </a>
+      <a class="link magenta" href="https://playteologico.pwx.academy" target="_blank" rel="noopener">
+        ▶ PLAY TEOLÓGICO
+      </a>
+      <a class="link violet" href="https://www.instagram.com/pwx_academy/" target="_blank" rel="noopener">
+        @ INSTAGRAM
+      </a>
+      <a class="link green" href="https://wa.me/5531973286490" target="_blank" rel="noopener">
+        ✆ WHATSAPP
+      </a>
+      <a class="link cyan" href="https://pwx.academy" target="_blank" rel="noopener">
+        ◆ SITE OFICIAL
+      </a>
+    </nav>
+
+    <div class="footer">© POWER ACADEMY</div>
+  </div>
+</body>
+</html>
