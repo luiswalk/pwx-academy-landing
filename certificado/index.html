@@ -1,0 +1,949 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dados para o certificado · Power Academy</title>
+<meta name="description" content="Formatura 2026 · Teologia Ministerial. Informe os dados para a emissão do seu certificado.">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#faf8f5">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Power Academy">
+<meta property="og:url" content="https://pwx.academy/certificado">
+<meta property="og:title" content="Dados para o seu certificado">
+<meta property="og:description" content="Formatura 2026 · Teologia Ministerial. O certificado é emitido exatamente com estes dados: preencha com atenção.">
+<meta property="og:image" content="https://pwx.academy/certificado/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/public/acad.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Cormorant+SC:wght@500;600&family=DM+Sans:wght@400;500;600&family=UnifrakturMaguntia&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  [hidden] { display: none !important; }
+
+  :root {
+    --ink: #1a1714;
+    --ink-soft: #4a4540;
+    --ink-muted: #6b6560;
+    --line: #d6cfc4;
+    --rule: #e8e2d9;
+    --parchment: #faf8f5;
+    --paper: #fffdf9;
+    --white: #ffffff;
+    --gold: #b8965a;
+    --gold-deep: #8a6d3b;
+    --gold-light: #d4b07a;
+    --gold-wash: #f6f0e5;
+    --error: #a3362a;
+    --error-wash: #fbf1ef;
+    --serif: 'Cormorant Garamond', Georgia, serif;
+    --sc: 'Cormorant SC', 'Cormorant Garamond', Georgia, serif;
+    --sans: 'DM Sans', system-ui, -apple-system, sans-serif;
+    --black: 'UnifrakturMaguntia', 'Old English Text MT', Georgia, serif;
+  }
+
+  html { background: var(--parchment); -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+  body {
+    font-family: var(--sans); font-size: 16px; line-height: 1.55;
+    background: var(--parchment); color: var(--ink);
+    -webkit-font-smoothing: antialiased;
+    min-height: 100vh; display: flex; flex-direction: column;
+  }
+  main { flex: 1; }
+  a { color: var(--gold-deep); text-underline-offset: 3px; }
+  strong { font-weight: 600; }
+  fieldset { min-width: 0; }
+  .sr { position: absolute !important; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+
+  /* ─── TOPO ─────────────────────────────────────────── */
+  .topo { display: flex; justify-content: center; padding: 20px 20px 16px; border-bottom: 1px solid var(--rule); }
+  .topo img { display: block; height: 36px; width: auto; }
+
+  .wrap { width: 100%; max-width: 640px; margin: 0 auto; padding: 44px 20px 72px; }
+
+  /* ─── ABERTURA ─────────────────────────────────────── */
+  .eyebrow {
+    display: flex; align-items: flex-start; gap: 12px;
+    font-size: 11px; font-weight: 500; letter-spacing: 0.2em; text-transform: uppercase;
+    color: var(--gold-deep); margin-bottom: 18px;
+  }
+  .eyebrow::before { content: ''; width: 32px; height: 1px; margin-top: 0.75em; background: var(--gold); flex: none; }
+  h1, .titulo-etapa {
+    font-family: var(--serif); font-weight: 300;
+    font-size: clamp(40px, 10.5vw, 58px); line-height: 1.02; letter-spacing: -0.01em;
+    margin-bottom: 20px;
+  }
+  .titulo-etapa { font-size: clamp(36px, 9vw, 50px); }
+  .titulo-etapa:focus { outline: none; }
+  .lead { font-size: 17px; line-height: 1.65; margin-bottom: 26px; }
+
+  .caixa {
+    background: var(--white); border: 1px solid var(--rule); border-left: 3px solid var(--gold);
+    padding: 20px 20px 20px 22px;
+  }
+  .caixa h2 {
+    font-family: var(--sans); font-size: 11px; font-weight: 600; letter-spacing: 0.18em;
+    text-transform: uppercase; color: var(--gold-deep); margin-bottom: 12px;
+  }
+  .caixa ul { list-style: none; display: grid; gap: 10px; }
+  .caixa li { position: relative; padding-left: 18px; font-size: 15.5px; line-height: 1.55; }
+  .caixa li::before { content: ''; position: absolute; left: 0; top: 0.75em; width: 9px; height: 1px; background: var(--gold); }
+  .caixa p { font-size: 15.5px; }
+  .caixa p + .btn { margin-top: 16px; }
+
+  /* ─── FORMULÁRIO ───────────────────────────────────── */
+  .nota-campos { font-size: 13.5px; color: var(--ink-muted); margin: 30px 0 0; }
+  .alerta { background: var(--error-wash); border: 1px solid #ecccc6; color: var(--error); padding: 14px 16px; font-size: 15px; margin-top: 16px; }
+
+  .bloco { margin-top: 30px; padding-top: 32px; border-top: 1px solid var(--rule); }
+  .bloco-cab { display: flex; align-items: baseline; gap: 14px; margin-bottom: 20px; }
+  .num { font-size: 12px; font-weight: 600; letter-spacing: 0.12em; color: var(--gold); }
+  .bloco-cab h2 { font-family: var(--serif); font-weight: 500; font-size: 28px; line-height: 1.15; }
+  .opc {
+    font-family: var(--sans); font-size: 11px; font-weight: 500; letter-spacing: 0.16em;
+    text-transform: uppercase; color: var(--ink-muted); margin-left: 4px; vertical-align: 3px;
+  }
+  .bloco-intro { font-size: 15.5px; margin: -6px 0 16px; }
+
+  .campo { margin-bottom: 22px; border: 0; }
+  .campo > label, .campo > legend { display: block; font-size: 15px; font-weight: 600; margin-bottom: 4px; }
+  .dica { font-size: 13.5px; line-height: 1.5; color: var(--ink-muted); margin-bottom: 8px; }
+
+  input[type=text], input[type=email], input[type=tel], textarea {
+    display: block; width: 100%; min-height: 52px;
+    font: inherit; font-size: 17px; color: var(--ink);
+    background: var(--white); border: 1px solid var(--line); border-radius: 6px;
+    padding: 13px 14px;
+    -webkit-appearance: none; appearance: none;
+    transition: border-color 0.15s, box-shadow 0.15s;
+  }
+  textarea { min-height: 150px; resize: vertical; line-height: 1.55; }
+  input::placeholder, textarea::placeholder { color: #a9a197; }
+  input:focus, textarea:focus { outline: none; border-color: var(--gold); box-shadow: 0 0 0 3px rgba(184, 150, 90, 0.22); }
+  .curto { max-width: 300px; }
+
+  .invalido input[type=text], .invalido input[type=email], .invalido input[type=tel] { border-color: var(--error); }
+  .invalido input:focus { box-shadow: 0 0 0 3px rgba(163, 54, 42, 0.16); }
+  .erro { font-size: 14px; font-weight: 500; color: var(--error); margin-top: 7px; }
+  .extenso { font-size: 14px; color: var(--ink-muted); margin-top: 7px; }
+  .extenso:empty { display: none; }
+  .contador { font-size: 12.5px; color: var(--ink-muted); margin-top: 6px; text-align: right; }
+
+  .aviso-campo { margin-top: 10px; background: var(--gold-wash); border: 1px solid #eadfcb; padding: 12px 14px; font-size: 14.5px; line-height: 1.5; }
+  .aviso-campo p + p { margin-top: 8px; }
+  .link-btn {
+    font: inherit; font-weight: 600; color: var(--gold-deep);
+    background: none; border: 0; padding: 0; cursor: pointer;
+    text-decoration: underline; text-underline-offset: 3px; text-align: left;
+  }
+
+  /* Prévia no estilo do certificado */
+  .previa { margin: 4px 0 28px; }
+  .previa-leg { font-size: 11px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: var(--ink-muted); margin-bottom: 12px; }
+  .cert {
+    position: relative; text-align: center;
+    background: var(--paper); border: 1px solid var(--gold);
+    box-shadow: inset 0 0 0 5px var(--paper), inset 0 0 0 6px var(--gold-light);
+    padding: 28px 18px 24px;
+  }
+  .cert .c { position: absolute; width: 7px; height: 7px; background: var(--gold); transform: rotate(45deg); }
+  .c.tl { top: -4px; left: -4px; } .c.tr { top: -4px; right: -4px; }
+  .c.bl { bottom: -4px; left: -4px; } .c.br { bottom: -4px; right: -4px; }
+  .cert-caps {
+    font-family: var(--sc); font-weight: 500; font-size: 11.5px; line-height: 1.6;
+    letter-spacing: 0.11em; text-transform: uppercase; color: var(--ink-soft);
+    max-width: 30em; margin: 0 auto;
+  }
+  .cert-nome {
+    font-family: var(--black); font-weight: 400; color: var(--ink);
+    font-size: clamp(28px, 8vw, 42px); line-height: 1.2; margin: 12px 0;
+    white-space: nowrap;
+  }
+  .cert-nome.vazio { color: #cdc5b9; }
+  .cert-nome.quebra { white-space: normal; }
+  .cert-curso { font-family: var(--black); font-size: clamp(20px, 5.6vw, 28px); color: var(--ink); margin-top: 10px; }
+  .leitura { margin-top: 10px; font-size: 14px; color: var(--ink-muted); }
+  .leitura span { font-size: 15.5px; font-weight: 500; color: var(--ink); overflow-wrap: anywhere; }
+
+  /* Opções merecedor / merecedora */
+  .opcoes { display: grid; gap: 10px; }
+  @media (min-width: 480px) { .opcoes { grid-template-columns: 1fr 1fr; } }
+  .opcao {
+    display: flex; gap: 12px; align-items: flex-start; cursor: pointer;
+    background: var(--white); border: 1px solid var(--line); border-radius: 6px; padding: 14px;
+    transition: border-color 0.15s, background 0.15s;
+  }
+  .opcao input { width: 18px; height: 18px; margin-top: 3px; accent-color: var(--gold-deep); flex: none; }
+  .opcao strong { display: block; font-size: 16px; }
+  .opcao em {
+    display: block; font-family: var(--sc); font-style: normal; font-size: 12.5px; line-height: 1.45;
+    letter-spacing: 0.05em; color: var(--ink-muted); margin-top: 4px; text-wrap: balance;
+  }
+  .opcao:has(input:checked) { border-color: var(--gold); background: var(--gold-wash); }
+  .opcao:has(input:focus-visible) { box-shadow: 0 0 0 3px rgba(184, 150, 90, 0.25); }
+  .invalido .opcao { border-color: var(--error); }
+
+  .check { display: flex; gap: 12px; align-items: flex-start; font-size: 15px; line-height: 1.5; cursor: pointer; margin: 2px 0 22px; }
+  .check input { width: 20px; height: 20px; margin-top: 1px; accent-color: var(--gold-deep); flex: none; }
+  .check:has(input:disabled) { color: #a39c93; cursor: not-allowed; }
+  .check-forte { background: var(--white); border: 1px solid var(--gold); border-radius: 6px; padding: 16px; font-weight: 500; margin-bottom: 8px; }
+
+  .hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+
+  /* ─── BOTÕES ───────────────────────────────────────── */
+  .acoes { margin-top: 32px; }
+  .btn {
+    display: block; width: 100%; min-height: 56px; padding: 16px 22px;
+    font: inherit; font-size: 13.5px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase;
+    color: var(--parchment); background: var(--ink); border: 1px solid var(--ink); border-radius: 6px;
+    cursor: pointer; transition: background 0.15s, opacity 0.15s;
+  }
+  .btn:hover { background: #000; }
+  .btn:focus-visible { outline: 3px solid rgba(184, 150, 90, 0.6); outline-offset: 2px; }
+  .btn[disabled] { opacity: 0.55; cursor: progress; }
+  .btn-sec { color: var(--ink); background: transparent; }
+  .btn-sec:hover { background: rgba(26, 23, 20, 0.05); }
+  .acoes-nota { font-size: 13.5px; color: var(--ink-muted); text-align: center; margin-top: 12px; }
+  .acoes-duplas { display: grid; gap: 10px; margin-top: 22px; }
+  @media (min-width: 560px) { .acoes-duplas { grid-template-columns: 1.5fr 1fr; } }
+
+  /* ─── REVISÃO E ENVIO ─────────────────────────────── */
+  .cert-rev { margin: 6px 0 30px; }
+  .resumo { border-top: 1px solid var(--rule); margin-bottom: 26px; }
+  .resumo div { padding: 14px 0; border-bottom: 1px solid var(--rule); }
+  .resumo dt { font-size: 11px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: var(--ink-muted); margin-bottom: 4px; }
+  .resumo dd { font-size: 17px; line-height: 1.45; overflow-wrap: anywhere; }
+  .resumo dd small { display: block; font-size: 14px; color: var(--ink-muted); margin-top: 3px; }
+  .resumo .trecho { font-family: var(--serif); font-size: 19px; font-style: italic; }
+  .protocolo { font-size: 14px; color: var(--ink-muted); margin: -8px 0 28px; }
+  .protocolo strong { font-size: 16px; color: var(--ink); letter-spacing: 0.12em; font-variant-numeric: tabular-nums; margin-left: 4px; }
+
+  /* ─── RODAPÉ ───────────────────────────────────────── */
+  .rodape { border-top: 1px solid var(--rule); padding: 30px 20px 40px; text-align: center; font-size: 14px; color: var(--ink-muted); }
+  .rodape p + p { margin-top: 8px; }
+  .rodape .lgpd { font-size: 12.5px; max-width: 34em; margin-left: auto; margin-right: auto; }
+  .rodape .copy { font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; }
+
+  @media (min-width: 720px) {
+    .wrap { padding-top: 64px; }
+    .cert { padding: 34px 28px 30px; }
+  }
+</style>
+</head>
+<body>
+
+<header class="topo">
+  <a href="/" aria-label="Power Academy, página inicial"><img src="/public/acad.png" alt="Power Academy"></a>
+</header>
+
+<main class="wrap">
+
+  <!-- ═══ ABERTURA ═══ -->
+  <section id="intro">
+    <p class="eyebrow">Formatura 2026 · Teologia Ministerial</p>
+    <h1>Dados para o seu certificado</h1>
+    <p class="lead">Estas informações vão direto para a emissão do seu certificado. O nome sai impresso <strong>exatamente como você digitar</strong>, com os mesmos acentos e as mesmas letras maiúsculas e minúsculas. Por isso, preencha com calma.</p>
+    <div class="caixa">
+      <h2>Antes de começar</h2>
+      <ul>
+        <li>Tenha em mãos seu RG ou CNH e use o nome completo que está no documento, sem abreviar.</li>
+        <li>Escreva como deve sair no papel, com iniciais maiúsculas e acentos (ex.: Ana Beatriz de Assis Lima). Evite escrever tudo em maiúsculas.</li>
+        <li>No final, você revisa tudo antes de enviar.</li>
+        <li><strong>Prazo: até terça-feira, 15 de setembro.</strong></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ═══ FORMULÁRIO ═══ -->
+  <form id="form" novalidate>
+    <p class="nota-campos">Todos os campos são obrigatórios, exceto o testemunho.</p>
+    <div class="alerta" id="alerta-form" role="alert" hidden></div>
+
+    <section class="bloco" aria-labelledby="t-nome">
+      <div class="bloco-cab"><span class="num">01</span><h2 id="t-nome">Seu nome no certificado</h2></div>
+
+      <div class="campo">
+        <label for="nome">Nome completo</label>
+        <p class="dica" id="nome-dica">Igual ao do seu documento, com acentos e iniciais maiúsculas. Sem abreviações.</p>
+        <input id="nome" name="nome" type="text" autocomplete="name" autocapitalize="words" spellcheck="false" maxlength="120" enterkeyhint="next" aria-describedby="nome-dica nome-erro">
+        <p class="erro" id="nome-erro" hidden></p>
+        <div class="aviso-campo" id="nome-aviso" hidden></div>
+      </div>
+
+      <figure class="previa">
+        <figcaption class="previa-leg">Assim o seu nome vai aparecer</figcaption>
+        <div class="cert" aria-hidden="true">
+          <i class="c tl"></i><i class="c tr"></i><i class="c bl"></i><i class="c br"></i>
+          <p class="cert-caps">declaramos a todos por meio deste certificado que</p>
+          <p class="cert-nome vazio" id="previa-nome">Seu nome aqui</p>
+          <p class="cert-caps" id="previa-trat">… faz-se merecedor(a) e recebe o certificado de</p>
+          <p class="cert-curso">Teologia Ministerial</p>
+        </div>
+        <p class="leitura">Em letra comum: <span id="previa-plana">—</span></p>
+      </figure>
+
+      <fieldset class="campo" id="tratamento-grupo">
+        <legend>Como o texto do certificado se refere a você</legend>
+        <div class="opcoes">
+          <label class="opcao">
+            <input type="radio" name="tratamento" value="merecedor" aria-describedby="tratamento-erro">
+            <span><strong>Merecedor</strong><em>“… faz-se merecedor e recebe o certificado …”</em></span>
+          </label>
+          <label class="opcao">
+            <input type="radio" name="tratamento" value="merecedora" aria-describedby="tratamento-erro">
+            <span><strong>Merecedora</strong><em>“… faz-se merecedora e recebe o certificado …”</em></span>
+          </label>
+        </div>
+        <p class="erro" id="tratamento-erro" hidden></p>
+      </fieldset>
+    </section>
+
+    <section class="bloco" aria-labelledby="t-doc">
+      <div class="bloco-cab"><span class="num">02</span><h2 id="t-doc">Documento e nascimento</h2></div>
+
+      <div class="campo" id="campo-cpf">
+        <label for="cpf">CPF</label>
+        <p class="dica" id="cpf-dica">Usado no registro da certificação.</p>
+        <input id="cpf" class="curto" name="cpf" type="text" inputmode="numeric" autocomplete="off" placeholder="000.000.000-00" maxlength="14" enterkeyhint="next" aria-describedby="cpf-dica cpf-erro">
+        <p class="erro" id="cpf-erro" hidden></p>
+      </div>
+
+      <label class="check"><input type="checkbox" id="estrangeiro" name="estrangeiro"><span>Sou estrangeiro(a) e não tenho CPF</span></label>
+
+      <div id="bloco-estrangeiro" hidden>
+        <div class="campo">
+          <label for="documento">Nº do passaporte ou documento de identificação</label>
+          <input id="documento" name="documento" type="text" autocomplete="off" autocapitalize="characters" spellcheck="false" maxlength="40" enterkeyhint="next" aria-describedby="documento-erro">
+          <p class="erro" id="documento-erro" hidden></p>
+        </div>
+        <div class="campo">
+          <label for="pais">País do documento</label>
+          <input id="pais" name="pais" type="text" autocomplete="country-name" maxlength="60" enterkeyhint="next" aria-describedby="pais-erro">
+          <p class="erro" id="pais-erro" hidden></p>
+        </div>
+      </div>
+
+      <div class="campo">
+        <label for="nascimento">Data de nascimento</label>
+        <input id="nascimento" class="curto" name="nascimento" type="text" inputmode="numeric" autocomplete="bday" placeholder="dd/mm/aaaa" maxlength="10" enterkeyhint="next" aria-describedby="nascimento-extenso nascimento-erro">
+        <p class="extenso" id="nascimento-extenso"></p>
+        <p class="erro" id="nascimento-erro" hidden></p>
+      </div>
+    </section>
+
+    <section class="bloco" aria-labelledby="t-contato">
+      <div class="bloco-cab"><span class="num">03</span><h2 id="t-contato">Contato</h2></div>
+
+      <div class="campo">
+        <label for="email">E-mail</label>
+        <p class="dica" id="email-dica">Para falarmos com você se algo precisar de ajuste.</p>
+        <input id="email" name="email" type="email" inputmode="email" autocomplete="email" autocapitalize="off" spellcheck="false" maxlength="200" enterkeyhint="next" aria-describedby="email-dica email-erro">
+        <p class="erro" id="email-erro" hidden></p>
+        <div class="aviso-campo" id="email-aviso" hidden></div>
+      </div>
+
+      <div class="campo">
+        <label for="whatsapp">WhatsApp</label>
+        <p class="dica" id="whatsapp-dica">Com DDD.</p>
+        <input id="whatsapp" class="curto" name="whatsapp" type="tel" inputmode="tel" autocomplete="tel-national" placeholder="(31) 99999-9999" maxlength="20" enterkeyhint="next" aria-describedby="whatsapp-dica whatsapp-erro">
+        <p class="erro" id="whatsapp-erro" hidden></p>
+      </div>
+    </section>
+
+    <section class="bloco" aria-labelledby="t-test">
+      <div class="bloco-cab"><span class="num">04</span><h2 id="t-test">Seu testemunho <span class="opc">opcional</span></h2></div>
+      <p class="bloco-intro">Como foi essa caminhada para você? Conte com as suas palavras o que o curso significou. Pode ser uma frase ou alguns parágrafos.</p>
+      <div class="campo">
+        <label for="testemunho" class="sr">Seu testemunho</label>
+        <textarea id="testemunho" name="testemunho" rows="6" maxlength="3000" placeholder="Escreva aqui, se quiser." aria-describedby="testemunho-cont"></textarea>
+        <p class="contador" id="testemunho-cont">0 de 3.000 caracteres</p>
+      </div>
+      <label class="check"><input type="checkbox" id="autoriza" name="autoriza" disabled><span>Autorizo o Power Academy a publicar este testemunho com o meu nome.</span></label>
+    </section>
+
+    <div class="hp" aria-hidden="true">
+      <label for="empresa">Não preencha este campo</label>
+      <input id="empresa" name="empresa" type="text" tabindex="-1" autocomplete="off">
+    </div>
+
+    <div class="acoes">
+      <button type="submit" class="btn">Revisar meus dados</button>
+      <p class="acoes-nota">Nada é enviado antes da sua confirmação.</p>
+    </div>
+  </form>
+
+  <!-- ═══ REVISÃO ═══ -->
+  <section id="revisao" aria-labelledby="t-rev" hidden>
+    <p class="eyebrow">Última etapa</p>
+    <h2 id="t-rev" class="titulo-etapa" tabindex="-1">Confira antes de enviar</h2>
+    <p class="lead">Leia com calma, letra por letra. O certificado será emitido exatamente com os dados abaixo.</p>
+
+    <div class="cert cert-rev" aria-hidden="true">
+      <i class="c tl"></i><i class="c tr"></i><i class="c bl"></i><i class="c br"></i>
+      <p class="cert-caps">… declaramos a todos por meio deste certificado que</p>
+      <p class="cert-nome" id="rev-nome"></p>
+      <p class="cert-caps">… faz-se <span id="rev-trat"></span> e recebe o certificado de</p>
+      <p class="cert-curso">Teologia Ministerial</p>
+    </div>
+
+    <dl class="resumo" id="resumo"></dl>
+
+    <label class="check check-forte"><input type="checkbox" id="confirmo" aria-describedby="confirmo-erro"><span>Conferi letra por letra. Os dados estão corretos, e sei que o certificado será emitido exatamente com eles.</span></label>
+    <p class="erro" id="confirmo-erro" hidden></p>
+    <div class="alerta" id="erro-envio" role="alert" hidden></div>
+
+    <div class="acoes-duplas">
+      <button type="button" class="btn" id="btn-enviar">Confirmar e enviar</button>
+      <button type="button" class="btn btn-sec" id="btn-corrigir">Corrigir dados</button>
+    </div>
+  </section>
+
+  <!-- ═══ ENVIADO ═══ -->
+  <section id="sucesso" aria-labelledby="t-ok" hidden>
+    <p class="eyebrow">Dados recebidos</p>
+    <h2 id="t-ok" class="titulo-etapa" tabindex="-1">Obrigado, <span id="ok-nome"></span>.</h2>
+    <p class="lead">Seus dados chegaram ao Power Academy. O certificado será emitido com as informações que você conferiu.</p>
+    <p class="protocolo">Protocolo do envio: <strong id="ok-protocolo"></strong></p>
+    <div class="caixa">
+      <p><strong>Viu algum erro depois de enviar?</strong> Preencha de novo até terça-feira, 15 de setembro. Sempre vale o último envio.</p>
+      <button type="button" class="btn btn-sec" id="btn-correcao">Enviar uma correção</button>
+    </div>
+  </section>
+
+</main>
+
+<footer class="rodape">
+  <p>Dúvidas? <a href="https://wa.me/5531973286490" target="_blank" rel="noopener">Fale com o Power Academy pelo WhatsApp</a>.</p>
+  <p class="lgpd">Usamos estes dados apenas para emitir o seu certificado e registrar a certificação de extensão.</p>
+  <p class="copy">© 2026 Power Academy</p>
+</footer>
+
+<script>
+(() => {
+  'use strict';
+
+  // Supabase do Power Academy. A chave é a publishable (pública por natureza): a tabela
+  // certificado_dados só aceita INSERT nas colunas do formulário e só admin lê.
+  const SUPABASE_URL = 'https://cmztctjtnfpxtsnbwinr.supabase.co';
+  const SUPABASE_KEY = 'sb_publishable_6FoJaqtR5ZC0wfqGsHdJcg_gY5SWbXB';
+
+  const $ = id => document.getElementById(id);
+  const form = $('form');
+  const nome = $('nome'), cpf = $('cpf'), estrangeiro = $('estrangeiro'), documento = $('documento'), pais = $('pais');
+  const nasc = $('nascimento'), email = $('email'), zap = $('whatsapp'), testemunho = $('testemunho'), autoriza = $('autoriza');
+
+  const MESES = ['janeiro', 'fevereiro', 'março', 'abril', 'maio', 'junho', 'julho', 'agosto', 'setembro', 'outubro', 'novembro', 'dezembro'];
+  const PARTICULAS = new Set(['da', 'das', 'de', 'do', 'dos', 'e', 'di', 'du', 'del', 'della', 'van', 'von', 'der']);
+  const DOMINIOS = ['gmail.com', 'hotmail.com', 'hotmail.com.br', 'outlook.com', 'outlook.com.br', 'live.com', 'icloud.com',
+    'me.com', 'yahoo.com', 'yahoo.com.br', 'uol.com.br', 'bol.com.br', 'terra.com.br', 'msn.com'];
+
+  const soDigitos = s => (s || '').replace(/\D/g, '');
+  const limpar = s => (s || '').replace(/\s+/g, ' ').trim();
+
+  // ─── Nome ───────────────────────────────────────────
+  function capitalizar(texto) {
+    return limpar(texto).toLocaleLowerCase('pt-BR').split(' ').map((w, i) => {
+      if (i > 0 && PARTICULAS.has(w)) return w;
+      return w.split('-').map(p => p
+        .replace(/^(\p{L})/u, c => c.toLocaleUpperCase('pt-BR'))
+        .replace(/(['’])(\p{L})/u, (m, a, c) => a + c.toLocaleUpperCase('pt-BR'))
+      ).join('-');
+    }).join(' ');
+  }
+
+  function checarNome(valor) {
+    const n = limpar(valor);
+    if (!n) return { erro: 'Informe seu nome completo.' };
+    if (/\d/.test(n)) return { erro: 'O nome não pode ter números.' };
+    if (/[^\p{L}\p{M} '’.\-]/u.test(n)) return { erro: 'Use só letras, espaços, hífen ou apóstrofo.' };
+    const partes = n.split(' ').filter(p => p.replace(/[.'’\-]/g, ''));
+    if (partes.length < 2) return { erro: 'Escreva nome e sobrenome.' };
+    if (n.length < 5) return { erro: 'Nome muito curto. Escreva o nome completo.' };
+
+    const avisos = [];
+    const letras = n.replace(/[^\p{L}]/gu, '');
+    if (letras.length > 3 && letras === letras.toLocaleUpperCase('pt-BR')) {
+      avisos.push({ texto: 'Seu nome está todo em letras maiúsculas e sairia assim no certificado.', sugestao: capitalizar(n), depois: 'Depois, confira os acentos.' });
+    } else if (letras === letras.toLocaleLowerCase('pt-BR')) {
+      avisos.push({ texto: 'Seu nome está todo em letras minúsculas e sairia assim no certificado.', sugestao: capitalizar(n) });
+    }
+    if (partes.some((p, i) => /^\p{L}\.?$/u.test(p) && !(i > 0 && p.toLowerCase() === 'e'))) {
+      avisos.push({ texto: 'Há uma abreviação (como “F.”), e ela sai assim no certificado. Se o seu documento traz o nome por extenso, escreva completo.' });
+    }
+    return { nome: n, avisos };
+  }
+
+  function mostrarAvisosNome(r) {
+    const box = $('nome-aviso');
+    box.replaceChildren();
+    const avisos = r.avisos || [];
+    for (const a of avisos) {
+      const p = document.createElement('p');
+      p.append(a.texto + ' ');
+      if (a.sugestao && a.sugestao !== r.nome) {
+        const b = document.createElement('button');
+        b.type = 'button';
+        b.className = 'link-btn';
+        b.textContent = `Usar “${a.sugestao}”`;
+        b.addEventListener('click', () => {
+          nome.value = a.sugestao;
+          atualizarPrevia();
+          validar('nome');
+          nome.focus();
+        });
+        p.append(b);
+        if (a.depois) p.append(' ' + a.depois);
+      }
+      box.append(p);
+    }
+    box.hidden = avisos.length === 0;
+  }
+
+  // Encolhe o nome para caber em uma linha, como no certificado impresso.
+  function ajustarNome(el) {
+    el.classList.remove('quebra');
+    el.style.fontSize = '';
+    const base = parseFloat(getComputedStyle(el).fontSize);
+    let tam = base;
+    while (el.scrollWidth > el.clientWidth + 1 && tam > base * 0.6) {
+      tam -= 1;
+      el.style.fontSize = tam + 'px';
+    }
+    if (el.scrollWidth > el.clientWidth + 1) el.classList.add('quebra');
+  }
+
+  function atualizarPrevia() {
+    const n = limpar(nome.value);
+    const alvo = $('previa-nome');
+    alvo.textContent = n || 'Seu nome aqui';
+    alvo.classList.toggle('vazio', !n);
+    $('previa-plana').textContent = n || '—';
+    ajustarNome(alvo);
+  }
+
+  // ─── CPF, data, telefone ────────────────────────────
+  function cpfValido(d) {
+    if (d.length !== 11 || /^(\d)\1{10}$/.test(d)) return false;
+    const dv = n => {
+      let s = 0;
+      for (let i = 0; i < n; i++) s += Number(d[i]) * (n + 1 - i);
+      const r = (s * 10) % 11;
+      return r === 10 ? 0 : r;
+    };
+    return dv(9) === Number(d[9]) && dv(10) === Number(d[10]);
+  }
+
+  function formatarCPF(v) {
+    const d = soDigitos(v).slice(0, 11);
+    if (d.length <= 3) return d;
+    if (d.length <= 6) return `${d.slice(0, 3)}.${d.slice(3)}`;
+    if (d.length <= 9) return `${d.slice(0, 3)}.${d.slice(3, 6)}.${d.slice(6)}`;
+    return `${d.slice(0, 3)}.${d.slice(3, 6)}.${d.slice(6, 9)}-${d.slice(9)}`;
+  }
+
+  function formatarData(v) {
+    const iso = /^(\d{4})-(\d{2})-(\d{2})$/.exec(v.trim()); // preenchimento automático do navegador
+    const d = iso ? iso[3] + iso[2] + iso[1] : soDigitos(v).slice(0, 8);
+    if (d.length <= 2) return d;
+    if (d.length <= 4) return `${d.slice(0, 2)}/${d.slice(2)}`;
+    return `${d.slice(0, 2)}/${d.slice(2, 4)}/${d.slice(4)}`;
+  }
+
+  function lerData(v) {
+    const m = /^(\d{2})\/(\d{2})\/(\d{4})$/.exec(v.trim());
+    if (!m) return null;
+    const dia = Number(m[1]), mes = Number(m[2]), ano = Number(m[3]);
+    const dt = new Date(ano, mes - 1, dia);
+    if (dt.getFullYear() !== ano || dt.getMonth() !== mes - 1 || dt.getDate() !== dia) return null;
+    return { ano, iso: `${m[3]}-${m[2]}-${m[1]}`, formatada: m[0], extenso: `${dia === 1 ? '1º' : dia} de ${MESES[mes - 1]} de ${ano}` };
+  }
+
+  function formatarTelefone(v) {
+    let d = soDigitos(v).replace(/^0+/, '');
+    if (d.length > 11 && d.startsWith('55')) d = d.slice(2);
+    d = d.slice(0, 11);
+    if (!d) return '';
+    if (d.length <= 2) return `(${d}`;
+    if (d.length <= 6) return `(${d.slice(0, 2)}) ${d.slice(2)}`;
+    if (d.length <= 10) return `(${d.slice(0, 2)}) ${d.slice(2, 6)}-${d.slice(6)}`;
+    return `(${d.slice(0, 2)}) ${d.slice(2, 7)}-${d.slice(7)}`;
+  }
+
+  // Aplica a máscara sem jogar o cursor para o fim quando a pessoa edita no meio.
+  function mascarar(input, formatar) {
+    input.addEventListener('input', () => {
+      const pos = input.selectionStart ?? input.value.length;
+      const antes = soDigitos(input.value.slice(0, pos)).length;
+      const novo = formatar(input.value);
+      if (novo === input.value) return;
+      input.value = novo;
+      let i = 0, vistos = 0;
+      while (i < novo.length && vistos < antes) { if (/\d/.test(novo[i])) vistos++; i++; }
+      try { input.setSelectionRange(i, i); } catch (_) { /* campo sem seleção */ }
+    });
+  }
+
+  // ─── E-mail: sugere correção de domínio digitado errado ───
+  function distancia(a, b) {
+    const d = Array.from({ length: a.length + 1 }, (_, i) => [i, ...Array(b.length).fill(0)]);
+    for (let j = 1; j <= b.length; j++) d[0][j] = j;
+    for (let i = 1; i <= a.length; i++) {
+      for (let j = 1; j <= b.length; j++) {
+        const custo = a[i - 1] === b[j - 1] ? 0 : 1;
+        d[i][j] = Math.min(d[i - 1][j] + 1, d[i][j - 1] + 1, d[i - 1][j - 1] + custo);
+        if (i > 1 && j > 1 && a[i - 1] === b[j - 2] && a[i - 2] === b[j - 1]) d[i][j] = Math.min(d[i][j], d[i - 2][j - 2] + 1);
+      }
+    }
+    return d[a.length][b.length];
+  }
+
+  function sugerirEmail() {
+    const box = $('email-aviso');
+    box.replaceChildren();
+    box.hidden = true;
+    const m = /^([^\s@]+)@([^\s@]+)$/.exec(email.value.trim().toLowerCase());
+    if (!m) return;
+    const dominio = m[2].replace(/\.$/, '');
+    if (DOMINIOS.includes(dominio)) return;
+    const perto = DOMINIOS.find(d => distancia(dominio, d) === 1);
+    if (!perto) return;
+    const sugestao = `${m[1]}@${perto}`;
+    const p = document.createElement('p');
+    const b = document.createElement('button');
+    b.type = 'button';
+    b.className = 'link-btn';
+    b.textContent = sugestao;
+    b.addEventListener('click', () => {
+      email.value = sugestao;
+      box.hidden = true;
+      validar('email');
+      email.focus();
+    });
+    p.append('Você quis dizer ', b, '?');
+    box.append(p);
+    box.hidden = false;
+  }
+
+  // ─── Validação ──────────────────────────────────────
+  const regras = {
+    nome() {
+      const r = checarNome(nome.value);
+      mostrarAvisosNome(r);
+      return r.erro || '';
+    },
+    tratamento() {
+      return form.tratamento.value ? '' : 'Escolha uma das opções.';
+    },
+    cpf() {
+      if (estrangeiro.checked) return '';
+      const d = soDigitos(cpf.value);
+      if (!d) return 'Informe seu CPF.';
+      if (d.length < 11) return 'O CPF tem 11 números.';
+      return cpfValido(d) ? '' : 'Este CPF não é válido. Confira os números.';
+    },
+    documento() {
+      if (!estrangeiro.checked) return '';
+      return limpar(documento.value).length >= 4 ? '' : 'Informe o número do documento.';
+    },
+    pais() {
+      if (!estrangeiro.checked) return '';
+      return limpar(pais.value).length >= 2 ? '' : 'Informe o país do documento.';
+    },
+    nascimento() {
+      if (!nasc.value.trim()) return 'Informe sua data de nascimento.';
+      const d = lerData(nasc.value);
+      if (!d) return 'Data inválida. Use dia/mês/ano, por exemplo 05/03/1980.';
+      if (d.ano < 1920 || d.ano > 2015) return 'Confira o ano de nascimento.';
+      return '';
+    },
+    email() {
+      const v = email.value.trim();
+      if (!v) return 'Informe seu e-mail.';
+      return /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v) ? '' : 'E-mail inválido. Confira o @ e o domínio completo.';
+    },
+    whatsapp() {
+      const d = soDigitos(zap.value);
+      if (!d) return 'Informe seu WhatsApp.';
+      if (estrangeiro.checked) return d.length >= 8 && d.length <= 15 ? '' : 'Número inválido. Inclua o código do país.';
+      return d.length === 10 || d.length === 11 ? '' : 'Número incompleto. Use DDD + número.';
+    },
+  };
+  const ORDEM = Object.keys(regras);
+  const alvos = { nome, tratamento: $('tratamento-grupo'), cpf, documento, pais, nascimento: nasc, email, whatsapp: zap };
+  const tocados = new Set();
+  let tentouRevisar = false;
+
+  function validar(chave) {
+    const msg = regras[chave]();
+    const el = alvos[chave];
+    const box = $(chave + '-erro');
+    box.textContent = msg;
+    box.hidden = !msg;
+    el.closest('.campo').classList.toggle('invalido', !!msg);
+    if (el.tagName === 'INPUT') el.setAttribute('aria-invalid', msg ? 'true' : 'false');
+    return !msg;
+  }
+
+  function limparErro(chave) {
+    const el = alvos[chave];
+    $(chave + '-erro').hidden = true;
+    el.closest('.campo').classList.remove('invalido');
+    if (el.tagName === 'INPUT') el.removeAttribute('aria-invalid');
+  }
+
+  // Máscaras primeiro, para a validação ao digitar já ver o valor formatado.
+  mascarar(cpf, formatarCPF);
+  mascarar(nasc, formatarData);
+  mascarar(zap, v => (estrangeiro.checked ? v.replace(/[^\d+()\s-]/g, '') : formatarTelefone(v)));
+
+  // Ao sair do campo, a mensagem espera um instante: se aparecesse na hora, o conteúdo
+  // abaixo pularia e o toque no campo seguinte poderia não pegar.
+  for (const chave of ['nome', 'cpf', 'documento', 'pais', 'nascimento', 'email', 'whatsapp']) {
+    const el = alvos[chave];
+    el.addEventListener('blur', () => setTimeout(() => {
+      if (el.value.trim() || tentouRevisar) { tocados.add(chave); validar(chave); }
+      if (chave === 'email') sugerirEmail();
+    }, 200));
+    el.addEventListener('input', () => {
+      if (tocados.has(chave) || tentouRevisar) validar(chave);
+    });
+  }
+
+  nome.addEventListener('input', atualizarPrevia);
+  nome.addEventListener('blur', () => {
+    const n = limpar(nome.value);
+    if (n !== nome.value) { nome.value = n; atualizarPrevia(); }
+  });
+
+  nasc.addEventListener('input', () => {
+    const d = lerData(nasc.value);
+    $('nascimento-extenso').textContent = d && d.ano >= 1920 && d.ano <= 2015 ? `Por extenso: ${d.extenso}` : '';
+  });
+
+  form.querySelectorAll('input[name=tratamento]').forEach(r => r.addEventListener('change', () => {
+    $('previa-trat').textContent = `… faz-se ${r.value} e recebe o certificado de`;
+    validar('tratamento');
+  }));
+
+  estrangeiro.addEventListener('change', () => {
+    const e = estrangeiro.checked;
+    $('campo-cpf').hidden = e;
+    $('bloco-estrangeiro').hidden = !e;
+    if (e) limparErro('cpf'); else { limparErro('documento'); limparErro('pais'); }
+    zap.placeholder = e ? '+1 555 123 4567' : '(31) 99999-9999';
+    $('whatsapp-dica').textContent = e ? 'Com o código do país, por exemplo +351.' : 'Com DDD.';
+    if (!e) zap.value = formatarTelefone(zap.value);
+    if (tocados.has('whatsapp') || tentouRevisar) validar('whatsapp');
+  });
+
+  testemunho.addEventListener('input', () => {
+    $('testemunho-cont').textContent = `${testemunho.value.length.toLocaleString('pt-BR')} de 3.000 caracteres`;
+    const tem = testemunho.value.trim().length > 0;
+    autoriza.disabled = !tem;
+    if (!tem) autoriza.checked = false;
+  });
+
+  // Enter avança para o próximo campo em vez de enviar o formulário.
+  form.addEventListener('keydown', e => {
+    const t = e.target;
+    if (e.key !== 'Enter' || t.tagName !== 'INPUT' || t.type === 'checkbox' || t.type === 'radio') return;
+    e.preventDefault();
+    const campos = [...form.querySelectorAll('input:not([tabindex="-1"]):not([disabled]), textarea, button[type=submit]')]
+      .filter(el => el.offsetParent !== null && !(el.type === 'radio' && !el.checked && form.tratamento.value));
+    const proximo = campos[campos.indexOf(t) + 1];
+    if (proximo) proximo.focus();
+  });
+
+  // ─── Etapas ─────────────────────────────────────────
+  let dados = null;
+  let idEnvio = null;
+  let enviando = false;
+
+  function irPara(etapa) {
+    $('intro').hidden = etapa !== 'form';
+    form.hidden = etapa !== 'form';
+    $('revisao').hidden = etapa !== 'revisao';
+    $('sucesso').hidden = etapa !== 'sucesso';
+    window.scrollTo(0, 0);
+    if (etapa === 'form') ajustarNome($('previa-nome'));
+    if (etapa === 'revisao') { ajustarNome($('rev-nome')); $('t-rev').focus({ preventScroll: true }); }
+    if (etapa === 'sucesso') $('t-ok').focus({ preventScroll: true });
+  }
+
+  function montarDados() {
+    const n = limpar(nome.value);
+    nome.value = n;
+    const est = estrangeiro.checked;
+    const data = lerData(nasc.value);
+    const texto = testemunho.value.trim();
+    let whatsapp = soDigitos(zap.value);
+    if (est && zap.value.trim().startsWith('+')) whatsapp = '+' + whatsapp;
+    return {
+      data,
+      whatsappExibir: zap.value.trim(),
+      payload: {
+        nome_certificado: n,
+        tratamento: form.tratamento.value,
+        estrangeiro: est,
+        cpf: est ? null : soDigitos(cpf.value),
+        documento: est ? limpar(documento.value) : null,
+        pais: est ? limpar(pais.value) : null,
+        data_nascimento: data.iso,
+        email: email.value.trim().toLowerCase(),
+        whatsapp,
+        testemunho: texto || null,
+        testemunho_autoriza_uso: Boolean(texto) && autoriza.checked,
+        confirmou_dados: true,
+      },
+    };
+  }
+
+  function preencherRevisao(d) {
+    const p = d.payload;
+    $('rev-nome').textContent = p.nome_certificado;
+    $('rev-trat').textContent = p.tratamento;
+    const dl = $('resumo');
+    dl.replaceChildren();
+    const linha = (rotulo, valor, detalhe, classe) => {
+      const div = document.createElement('div');
+      const dt = document.createElement('dt');
+      const dd = document.createElement('dd');
+      const v = document.createElement('span');
+      dt.textContent = rotulo;
+      v.textContent = valor;
+      if (classe) v.className = classe;
+      dd.append(v);
+      if (detalhe) {
+        const s = document.createElement('small');
+        s.textContent = detalhe;
+        dd.append(s);
+      }
+      div.append(dt, dd);
+      dl.append(div);
+    };
+    linha('Nome no certificado', p.nome_certificado, 'Confira os acentos, as maiúsculas e cada sobrenome.');
+    linha('Texto do certificado', `“… faz-se ${p.tratamento} e recebe o certificado …”`);
+    if (p.estrangeiro) linha('Documento', p.documento, `País: ${p.pais}`);
+    else linha('CPF', formatarCPF(p.cpf));
+    linha('Data de nascimento', d.data.formatada, d.data.extenso);
+    linha('E-mail', p.email);
+    linha('WhatsApp', d.whatsappExibir);
+    if (p.testemunho) {
+      const trecho = p.testemunho.length > 240 ? p.testemunho.slice(0, 240).trimEnd() + '…' : p.testemunho;
+      linha('Testemunho', trecho, p.testemunho_autoriza_uso ? 'Publicação autorizada, com o seu nome.' : 'Sem autorização para publicar.', 'trecho');
+    } else {
+      linha('Testemunho', 'Não enviado');
+    }
+    $('confirmo').checked = false;
+    $('confirmo-erro').hidden = true;
+    $('erro-envio').hidden = true;
+  }
+
+  form.addEventListener('submit', e => {
+    e.preventDefault();
+    tentouRevisar = true;
+    const invalidos = ORDEM.filter(k => !validar(k));
+    const alerta = $('alerta-form');
+    if (invalidos.length) {
+      alerta.textContent = invalidos.length === 1
+        ? 'Falta ajustar 1 campo. Ele está destacado abaixo.'
+        : `Faltam ajustar ${invalidos.length} campos. Eles estão destacados abaixo.`;
+      alerta.hidden = false;
+      const k = invalidos[0];
+      const foco = k === 'tratamento' ? form.querySelector('input[name=tratamento]') : alvos[k];
+      foco.focus({ preventScroll: true });
+      alvos[k].closest('.campo').scrollIntoView({ behavior: 'smooth', block: 'center' });
+      return;
+    }
+    alerta.hidden = true;
+    dados = montarDados();
+    idEnvio = null;
+    preencherRevisao(dados);
+    irPara('revisao');
+  });
+
+  function novoId() {
+    if (window.crypto && crypto.randomUUID) return crypto.randomUUID();
+    const b = crypto.getRandomValues(new Uint8Array(16));
+    b[6] = (b[6] & 0x0f) | 0x40;
+    b[8] = (b[8] & 0x3f) | 0x80;
+    const h = [...b].map(x => x.toString(16).padStart(2, '0')).join('');
+    return `${h.slice(0, 8)}-${h.slice(8, 12)}-${h.slice(12, 16)}-${h.slice(16, 20)}-${h.slice(20)}`;
+  }
+
+  $('btn-enviar').addEventListener('click', async () => {
+    if (enviando) return;
+    const confirmo = $('confirmo');
+    if (!confirmo.checked) {
+      $('confirmo-erro').textContent = 'Marque a confirmação acima para enviar.';
+      $('confirmo-erro').hidden = false;
+      confirmo.focus();
+      return;
+    }
+    $('confirmo-erro').hidden = true;
+    const btn = $('btn-enviar');
+    const erroEnvio = $('erro-envio');
+    erroEnvio.hidden = true;
+    enviando = true;
+    btn.disabled = true;
+    btn.textContent = 'Enviando…';
+    idEnvio = idEnvio || novoId(); // mesmo id nas novas tentativas: o banco recusa duplicata
+    try {
+      if ($('empresa').value) {
+        await new Promise(r => setTimeout(r, 700)); // robô preencheu o campo oculto: não grava
+      } else {
+        const res = await fetch(`${SUPABASE_URL}/rest/v1/certificado_dados`, {
+          method: 'POST',
+          headers: { apikey: SUPABASE_KEY, 'Content-Type': 'application/json', Prefer: 'return=minimal' },
+          body: JSON.stringify({ id: idEnvio, ...dados.payload }),
+        });
+        // 409: este mesmo envio já tinha chegado numa tentativa anterior
+        if (!res.ok && res.status !== 409) {
+          const corpo = await res.text().catch(() => '');
+          throw Object.assign(new Error(`HTTP ${res.status} ${corpo}`), { status: res.status });
+        }
+      }
+      $('ok-nome').textContent = dados.payload.nome_certificado.split(' ')[0];
+      $('ok-protocolo').textContent = idEnvio.replace(/-/g, '').slice(0, 8).toUpperCase().replace(/^(.{4})/, '$1-');
+      irPara('sucesso');
+    } catch (err) {
+      console.error(err);
+      erroEnvio.textContent = err.status && err.status < 500
+        ? 'Algum dado não foi aceito. Toque em “Corrigir dados”, confira e tente de novo. Se continuar, fale com a gente pelo WhatsApp.'
+        : 'Não conseguimos enviar agora. Confira sua internet e toque em “Confirmar e enviar” de novo. Seus dados continuam aqui.';
+      erroEnvio.hidden = false;
+    } finally {
+      enviando = false;
+      btn.disabled = false;
+      btn.textContent = 'Confirmar e enviar';
+    }
+  });
+
+  $('btn-corrigir').addEventListener('click', () => {
+    idEnvio = null;
+    irPara('form');
+    nome.focus();
+  });
+
+  $('btn-correcao').addEventListener('click', () => {
+    idEnvio = null;
+    irPara('form');
+  });
+
+  let espera;
+  window.addEventListener('resize', () => {
+    clearTimeout(espera);
+    espera = setTimeout(() => {
+      if (!form.hidden) ajustarNome($('previa-nome'));
+      if (!$('revisao').hidden) ajustarNome($('rev-nome'));
+    }, 120);
+  });
+  if (document.fonts) document.fonts.ready.then(() => ajustarNome($('previa-nome')));
+  atualizarPrevia();
+})();
+</script>
+</body>
+</html>
