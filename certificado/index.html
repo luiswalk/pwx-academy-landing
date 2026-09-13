@@ -361,7 +361,7 @@
         <textarea id="testemunho" name="testemunho" rows="6" maxlength="3000" placeholder="Escreva aqui, se quiser." aria-describedby="testemunho-cont"></textarea>
         <p class="contador" id="testemunho-cont">0 de 3.000 caracteres</p>
       </div>
-      <label class="check"><input type="checkbox" id="autoriza" name="autoriza" disabled><span>Autorizo o Power Academy a publicar este testemunho com o meu nome.</span></label>
+      <label class="check"><input type="checkbox" id="autoriza" name="autoriza" disabled><span>Autorizo o Power Academy a usar este testemunho, com o meu nome, na formatura e em materiais de divulgação.</span></label>
     </section>
 
     <div class="hp" aria-hidden="true">
@@ -833,7 +833,7 @@
     linha('WhatsApp', d.whatsappExibir);
     if (p.testemunho) {
       const trecho = p.testemunho.length > 240 ? p.testemunho.slice(0, 240).trimEnd() + '…' : p.testemunho;
-      linha('Testemunho', trecho, p.testemunho_autoriza_uso ? 'Publicação autorizada, com o seu nome.' : 'Sem autorização para publicar.', 'trecho');
+      linha('Testemunho', trecho, p.testemunho_autoriza_uso ? 'Uso autorizado, com o seu nome, na formatura e em divulgação.' : 'Sem autorização de uso.', 'trecho');
     } else {
       linha('Testemunho', 'Não enviado');
     }
