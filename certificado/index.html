@@ -99,8 +99,7 @@
   .alerta { background: var(--error-wash); border: 1px solid #ecccc6; color: var(--error); padding: 14px 16px; font-size: 15px; margin-top: 16px; }
 
   .bloco { margin-top: 30px; padding-top: 32px; border-top: 1px solid var(--rule); }
-  .bloco-cab { display: flex; align-items: baseline; gap: 14px; margin-bottom: 20px; }
-  .num { font-size: 12px; font-weight: 600; letter-spacing: 0.12em; color: var(--gold); }
+  .bloco-cab { margin-bottom: 20px; }
   .bloco-cab h2 { font-family: var(--serif); font-weight: 500; font-size: 28px; line-height: 1.15; }
   .opc {
     font-family: var(--sans); font-size: 11px; font-weight: 500; letter-spacing: 0.16em;
@@ -263,7 +262,7 @@
     <div class="alerta" id="alerta-form" role="alert" hidden></div>
 
     <section class="bloco" aria-labelledby="t-nome">
-      <div class="bloco-cab"><span class="num">01</span><h2 id="t-nome">Seu nome no certificado</h2></div>
+      <div class="bloco-cab"><h2 id="t-nome">Seu nome no certificado</h2></div>
 
       <div class="campo">
         <label for="nome">Nome completo</label>
@@ -302,7 +301,7 @@
     </section>
 
     <section class="bloco" aria-labelledby="t-doc">
-      <div class="bloco-cab"><span class="num">02</span><h2 id="t-doc">Documento e nascimento</h2></div>
+      <div class="bloco-cab"><h2 id="t-doc">Documento e nascimento</h2></div>
 
       <div class="campo" id="campo-cpf">
         <label for="cpf">CPF</label>
@@ -335,7 +334,7 @@
     </section>
 
     <section class="bloco" aria-labelledby="t-contato">
-      <div class="bloco-cab"><span class="num">03</span><h2 id="t-contato">Contato</h2></div>
+      <div class="bloco-cab"><h2 id="t-contato">Contato</h2></div>
 
       <div class="campo">
         <label for="email">E-mail</label>
@@ -354,7 +353,7 @@
     </section>
 
     <section class="bloco" aria-labelledby="t-test">
-      <div class="bloco-cab"><span class="num">04</span><h2 id="t-test">Seu testemunho <span class="opc">opcional</span></h2></div>
+      <div class="bloco-cab"><h2 id="t-test">Seu testemunho <span class="opc">opcional</span></h2></div>
       <p class="bloco-intro">Como foi essa caminhada para você? Conte com as suas palavras o que o curso significou. Pode ser uma frase ou alguns parágrafos.</p>
       <div class="campo">
         <label for="testemunho" class="sr">Seu testemunho</label>
@@ -377,7 +376,6 @@
 
   <!-- ═══ REVISÃO ═══ -->
   <section id="revisao" aria-labelledby="t-rev" hidden>
-    <p class="eyebrow">Última etapa</p>
     <h2 id="t-rev" class="titulo-etapa" tabindex="-1">Confira antes de enviar</h2>
     <p class="lead">Leia com calma, letra por letra. O certificado será emitido exatamente com os dados abaixo.</p>
 
@@ -403,7 +401,6 @@
 
   <!-- ═══ ENVIADO ═══ -->
   <section id="sucesso" aria-labelledby="t-ok" hidden>
-    <p class="eyebrow">Dados recebidos</p>
     <h2 id="t-ok" class="titulo-etapa" tabindex="-1">Obrigado, <span id="ok-nome"></span>.</h2>
     <p class="lead">Seus dados chegaram ao Power Academy. O certificado será emitido com as informações que você conferiu.</p>
     <p class="protocolo">Protocolo do envio: <strong id="ok-protocolo"></strong></p>
@@ -416,7 +413,7 @@
 </main>
 
 <footer class="rodape">
-  <p>Dúvidas? <a href="https://wa.me/5531973286490" target="_blank" rel="noopener">Fale com o Power Academy pelo WhatsApp</a>.</p>
+  <p>Dúvidas? <a href="https://wa.me/5531994150110?text=Ol%C3%A1!%20Tenho%20uma%20d%C3%BAvida%20sobre%20o%20formul%C3%A1rio%20do%20certificado%20da%20formatura." target="_blank" rel="noopener">Fale com o Power Academy pelo WhatsApp</a>.</p>
   <p class="lgpd">Usamos estes dados apenas para emitir o seu certificado e registrar a certificação de extensão.</p>
   <p class="copy">© 2026 Power Academy</p>
 </footer>
