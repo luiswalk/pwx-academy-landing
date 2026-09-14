@@ -79,6 +79,7 @@
   .titulo-etapa { font-size: clamp(36px, 9vw, 50px); }
   .titulo-etapa:focus { outline: none; }
   .lead { font-size: 17px; line-height: 1.65; margin-bottom: 26px; }
+  .condicao { font-size: 15.5px; line-height: 1.6; background: var(--gold-wash); border: 1px solid #eadfcb; padding: 14px 16px; margin: -8px 0 22px; }
 
   .caixa {
     background: var(--white); border: 1px solid var(--rule); border-left: 3px solid var(--gold);
@@ -245,6 +246,7 @@
     <p class="eyebrow">Formatura 2026 · Teologia Ministerial</p>
     <h1>Dados para o seu certificado</h1>
     <p class="lead">Estas informações vão direto para a emissão do seu certificado. O nome sai impresso <strong>exatamente como você digitar</strong>, com os mesmos acentos e as mesmas letras maiúsculas e minúsculas. Por isso, preencha com calma.</p>
+    <p class="condicao"><strong>Importante:</strong> o preenchimento não garante a emissão do certificado. A emissão tem como base a conclusão das disciplinas e a quitação financeira.</p>
     <div class="caixa">
       <h2>Antes de começar</h2>
       <ul>
@@ -389,6 +391,7 @@
 
     <dl class="resumo" id="resumo"></dl>
 
+    <p class="condicao">O envio não garante a emissão: o certificado depende da conclusão das disciplinas e da quitação financeira.</p>
     <label class="check check-forte"><input type="checkbox" id="confirmo" aria-describedby="confirmo-erro"><span>Conferi letra por letra. Os dados estão corretos, e sei que o certificado será emitido exatamente com eles.</span></label>
     <p class="erro" id="confirmo-erro" hidden></p>
     <div class="alerta" id="erro-envio" role="alert" hidden></div>
@@ -402,7 +405,7 @@
   <!-- ═══ ENVIADO ═══ -->
   <section id="sucesso" aria-labelledby="t-ok" hidden>
     <h2 id="t-ok" class="titulo-etapa" tabindex="-1">Obrigado, <span id="ok-nome"></span>.</h2>
-    <p class="lead">Seus dados chegaram ao Power Academy. O certificado será emitido com as informações que você conferiu.</p>
+    <p class="lead">Seus dados chegaram ao Power Academy. Com as disciplinas concluídas e a situação financeira quitada, o certificado será emitido com as informações que você conferiu.</p>
     <p class="protocolo">Protocolo do envio: <strong id="ok-protocolo"></strong></p>
     <div class="caixa">
       <p><strong>Viu algum erro depois de enviar?</strong> Preencha de novo até terça-feira, 15 de setembro. Sempre vale o último envio.</p>
