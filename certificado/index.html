@@ -134,17 +134,20 @@
     text-decoration: underline; text-underline-offset: 3px; text-align: left;
   }
 
-  /* Prévia real: a frente do certificado (modelo.html, em A4) reduzida para caber na largura */
+  /* Prévia: só o topo da frente do certificado (modelo.html, em A4), até o nome; o resto se apaga.
+     Recorte de 16 a 281 mm na largura (cabe o nome mais longo) e de 4 a 100 mm na altura: com nome
+     longo o texto sobe, e o corte em 100 mm ainda esconde o nome do curso. */
   .previa { margin: 4px 0 28px; }
   .previa-leg { font-size: 14px; font-weight: 600; margin-bottom: 10px; }
   .cert-real {
-    position: relative; overflow: hidden; background: var(--parchment);
-    box-shadow: 0 1px 2px rgba(26, 23, 20, 0.06), 0 10px 28px rgba(26, 23, 20, 0.1);
+    position: relative; overflow: hidden;
+    -webkit-mask-image: linear-gradient(to bottom, #000 80%, transparent);
+            mask-image: linear-gradient(to bottom, #000 80%, transparent);
   }
-  .cert-real::before { content: ''; display: block; padding-top: 70.707%; } /* 210 / 297 */
+  .cert-real::before { content: ''; display: block; padding-top: 36.226%; } /* 96 / 265 */
   .cert-real iframe {
     position: absolute; top: 0; left: 0; width: 297mm; height: 210mm; border: 0;
-    transform-origin: 0 0; transform: scale(var(--escala, 0)); pointer-events: none;
+    transform-origin: 0 0; transform: scale(var(--escala, 0)) translate(-16mm, -4mm); pointer-events: none;
   }
   .leitura { margin-top: 12px; font-size: 14px; color: var(--ink-muted); }
   .leitura span { font-size: 15.5px; font-weight: 500; color: var(--ink); overflow-wrap: anywhere; }
@@ -437,10 +440,10 @@
     box.hidden = avisos.length === 0;
   }
 
-  // ─── Prévia real do certificado ─────────────────────
-  // modelo.html é a frente do certificado em tamanho A4. Ela roda num iframe reduzido para caber
-  // na largura, e o ajuste do nome (encolher até caber numa linha) acontece dentro do modelo.
-  const LARGURA_A4 = 297 * 96 / 25.4; // 297 mm em px CSS
+  // ─── Prévia do certificado ──────────────────────────
+  // modelo.html é a frente do certificado em tamanho A4. Ela roda num iframe reduzido que mostra só
+  // o recorte do topo (ver .cert-real); o ajuste do nome acontece dentro do modelo.
+  const LARGURA_RECORTE = 265 * 96 / 25.4; // 265 mm em px CSS
 
   function prepararPrevia(caixa) {
     const iframe = caixa.querySelector('iframe');
@@ -461,7 +464,7 @@
   const previaRev = prepararPrevia($('rev-cert'));
 
   function escalar(caixa) {
-    if (caixa.clientWidth) caixa.style.setProperty('--escala', caixa.clientWidth / LARGURA_A4);
+    if (caixa.clientWidth) caixa.style.setProperty('--escala', caixa.clientWidth / LARGURA_RECORTE);
   }
   document.querySelectorAll('.cert-real').forEach(escalar); // já na carga, sem esperar o observador
   if ('ResizeObserver' in window) {
