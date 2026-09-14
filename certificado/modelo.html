@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Prévia do certificado · Power Academy</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Cormorant+SC:wght@500;600&family=DM+Sans:wght@500;600&family=UnifrakturMaguntia&display=swap" rel="stylesheet">
+<style>
+  /* Frente do certificado copiada de FORMANDOS ACADEMY/certificado/certificado.html (modelo de 14/09/2026).
+     O formulário mostra esta página, reduzida, como prévia. Se o modelo mudar, atualize aqui também. */
+  :root{
+    --paper:#FAF8F5;
+    --ink:#1A1714;
+    --ink-soft:#4A4540;
+    --gold:#B8965A;
+    --gold-light:#D4B07A;
+  }
+  *{ box-sizing:border-box; margin:0; padding:0; }
+  html,body{ width:297mm; height:210mm; overflow:hidden; background:var(--paper); color:var(--ink); }
+
+  .page{
+    position:relative; width:297mm; height:210mm; overflow:hidden;
+    padding:22mm 24mm 16mm;
+    font-family:'Cormorant SC','Cormorant Garamond',Georgia,serif;
+  }
+
+  .frame-outer,.frame-inner{ position:absolute; border:0.35mm solid var(--gold); pointer-events:none; }
+  .frame-outer{ inset:7mm; }
+  .frame-inner{ inset:9.2mm; border-width:0.2mm; border-color:var(--gold-light); }
+  .corner{ position:absolute; width:2.6mm; height:2.6mm; background:var(--gold); transform:rotate(45deg); }
+  .corner.tl{ top:5.7mm; left:5.7mm; } .corner.tr{ top:5.7mm; right:5.7mm; }
+  .corner.bl{ bottom:5.7mm; left:5.7mm; } .corner.br{ bottom:5.7mm; right:5.7mm; }
+
+  .logo{ display:block; margin:0 auto; width:64mm; }
+  .hairline{ width:14mm; height:0.25mm; background:var(--gold); margin:7mm auto 8mm; }
+
+  .body{ text-align:center; }
+  .blackletter{
+    font-family:'UnifrakturMaguntia','Old English Text MT',serif;
+    font-weight:400; color:var(--ink); line-height:1.1;
+  }
+  .nome{ font-size:40pt; margin:3mm 0 6mm; white-space:nowrap; }
+  .nome.vazio{ color:#CDC5B9; }
+  .curso{ font-size:34pt; margin:6mm 0 5mm; }
+
+  .footer{
+    position:absolute; left:24mm; right:24mm; bottom:14.5mm;
+    display:grid; grid-template-columns:1fr 46mm 1fr; align-items:end; column-gap:6mm;
+  }
+  .sig-col{ display:flex; flex-direction:column; gap:6mm; }
+  .sig-col.left{ align-items:flex-start; } .sig-col.right{ align-items:flex-end; }
+  .sig{ width:66mm; text-align:center; }
+  .sig .line{ height:0.25mm; background:var(--ink); margin-bottom:1.6mm; }
+  .sig .name{
+    font-family:'Cormorant SC',serif; font-weight:600; font-size:9.5pt;
+    letter-spacing:0.08em; color:var(--ink); text-transform:uppercase;
+  }
+  .sig .role{
+    font-family:'DM Sans',sans-serif; font-weight:500; font-size:6.4pt;
+    letter-spacing:0.18em; text-transform:uppercase; color:var(--ink-soft); margin-top:0.8mm;
+  }
+  .sig .ghost{ visibility:hidden; }
+  .sig .space{ height:10mm; }
+
+  .seal-wrap{ text-align:center; display:flex; flex-direction:column; align-items:center; gap:3mm; }
+  .seal{ width:38mm; height:38mm; }
+  .escola{
+    font-family:'DM Sans',sans-serif; font-weight:500; font-size:6pt; letter-spacing:0.22em;
+    text-transform:uppercase; color:var(--ink-soft); display:flex; align-items:center; gap:2.2mm;
+  }
+  .escola img{ height:3.4mm; }
+
+  .lead, .texto{
+    font-family:'Cormorant Garamond',Georgia,serif; font-weight:500; color:var(--ink-soft);
+    text-align:center; font-variant-numeric:lining-nums; font-feature-settings:"lnum" 1;
+  }
+  .lead{ font-size:13pt; font-style:italic; }
+  .texto{ font-size:13.5pt; line-height:1.5; max-width:170mm; margin:0 auto; text-wrap:balance; }
+  .texto.data{ font-size:12.5pt; }
+</style>
+</head>
+<body>
+<div class="page">
+  <div class="frame-outer"></div><div class="frame-inner"></div>
+  <div class="corner tl"></div><div class="corner tr"></div><div class="corner bl"></div><div class="corner br"></div>
+
+  <img class="logo" src="/certificado/assets/power-academy-logo.png" alt="Power Academy">
+  <div class="hairline"></div>
+
+  <div class="body">
+    <p class="lead">certifica que</p>
+
+    <h1 class="blackletter nome vazio" id="nome">Seu nome aqui</h1>
+
+    <p class="texto">concluiu com êxito o curso de formação, com 400 horas-aula em regime de ensino híbrido, e cumpriu todos os requisitos necessários para receber o certificado de</p>
+
+    <h2 class="blackletter curso">Teologia Ministerial</h2>
+
+    <p class="texto data">Belo Horizonte, 18 de setembro de 2026</p>
+  </div>
+
+  <div class="footer">
+    <div class="sig-col left">
+      <div class="sig"><div class="space"></div><div class="line"></div><div class="name">Carlos Damasceno</div><div class="role">Bispo · Power Church</div></div>
+      <div class="sig"><div class="space"></div><div class="line"></div><div class="name">Danicolly Damasceno</div><div class="role">Bispa · Power Church</div><div class="role ghost" aria-hidden="true">&nbsp;</div></div>
+    </div>
+
+    <div class="seal-wrap">
+      <svg class="seal" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <defs>
+          <path id="arcTop" d="M 100,100 m -66,0 a 66,66 0 1,1 132,0"/>
+          <path id="arcBottom" d="M 100,100 m -75,0 a 75,75 0 0,0 150,0"/>
+        </defs>
+        <polygon id="serrated" fill="none" stroke="#B8965A" stroke-width="1.2" stroke-linejoin="round" points=""/>
+        <circle cx="100" cy="100" r="84" fill="none" stroke="#B8965A" stroke-width="1.6" stroke-dasharray="0.1 4.4" stroke-linecap="round"/>
+        <circle cx="100" cy="100" r="50" fill="none" stroke="#B8965A" stroke-width="1.6" stroke-dasharray="0.1 4.4" stroke-linecap="round"/>
+        <text font-family="DM Sans, sans-serif" font-weight="600" font-size="11.5" letter-spacing="1.4" fill="#B8965A">
+          <textPath xlink:href="#arcTop" startOffset="50%" text-anchor="middle">POWER EDUCATION</textPath>
+        </text>
+        <text font-family="DM Sans, sans-serif" font-weight="600" font-size="11.5" letter-spacing="1.4" fill="#B8965A">
+          <textPath xlink:href="#arcBottom" startOffset="50%" text-anchor="middle">TEOLOGIA MINISTERIAL</textPath>
+        </text>
+        <text x="30" y="104.5" font-size="11" fill="#B8965A" text-anchor="middle">★</text>
+        <text x="170" y="104.5" font-size="11" fill="#B8965A" text-anchor="middle">★</text>
+        <image href="/certificado/assets/power-academy-logo-gold.png" x="64" y="82" width="72" height="21.3" preserveAspectRatio="xMidYMid meet"/>
+        <text x="100" y="121" font-family="DM Sans, sans-serif" font-weight="600" font-size="7.2" letter-spacing="1.4" fill="#B8965A" text-anchor="middle">MMXXVI</text>
+      </svg>
+      <div class="escola">Uma escola da <img src="/certificado/assets/power-church.png" alt="Power Church"></div>
+    </div>
+
+    <div class="sig-col right">
+      <div class="sig"><div class="space"></div><div class="line"></div><div class="name">Luis Felipe Costa</div><div class="role">Pastor · Diretor de Educação</div><div class="role">Power Education</div></div>
+    </div>
+  </div>
+</div>
+
+<script>
+  // Borda serrilhada do selo: 72 dentes entre os raios 92 e 97, igual ao gerar.js.
+  (() => {
+    const pts = [];
+    for (let i = 0; i < 144; i++) {
+      const r = i % 2 === 0 ? 97 : 92;
+      const a = (Math.PI * 2 * i) / 144 - Math.PI / 2;
+      pts.push((100 + r * Math.cos(a)).toFixed(2) + ',' + (100 + r * Math.sin(a)).toFixed(2));
+    }
+    document.getElementById('serrated').setAttribute('points', pts.join(' '));
+  })();
+
+  // Chamado pelo formulário a cada letra. Mesmo ajuste do gerar.js: parte de 40pt e
+  // reduz até o nome caber numa linha, com mínimo de 22pt.
+  window.definirNome = async nome => {
+    const el = document.getElementById('nome');
+    el.textContent = nome || 'Seu nome aqui';
+    el.classList.toggle('vazio', !nome);
+    el.style.fontSize = '';
+    if (document.fonts) await document.fonts.ready;
+    let tam = 40;
+    while (el.scrollWidth > el.clientWidth + 1 && tam > 22) {
+      tam -= 1;
+      el.style.fontSize = tam + 'pt';
+    }
+  };
+</script>
+</body>
+</html>
